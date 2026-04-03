@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>みんなでひこう！青柏祭2026 家族体験チケット｜のとくる？</title>
+<meta name="description" content="高さ12m・重さ20トンの山車を、家族みんなでひく！ユネスコ無形文化遺産・青柏祭2026。子ども大歓迎の体験チケット。先行割引4/8まで。">
+<meta property="og:title" content="みんなでひこう！青柏祭2026 家族体験チケット">
+<meta property="og:description" content="でかやまを家族みんなで引っ張る。子どもが生まれて初めて、20トンを動かした日。">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+/* ===== TOKENS ===== */
+:root {
+  --orange:    #F07020;
+  --orange-lt: #FF9A45;
+  --orange-bg: #FFF4E0;
+  --sky:       #3AACE0;
+  --sky-bg:    #EBF7FF;
+  --green:     #4DB870;
+  --yellow:    #FFD12E;
+  --red:       #E03A2F;
+  --cream:     #FFFDF5;
+  --cream2:    #FFF4E0;
+  --text:      #2D1E0F;
+  --text-md:   #5A4030;
+  --text-lt:   #9A8070;
+  --radius:    16px;
+  --radius-sm: 8px;
+  --shadow:    0 4px 20px rgba(0,0,0,.10);
+  --max:       720px;
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.75;
+  font-size: 16px;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* ===== LAYOUT ===== */
+.container { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+.section    { padding: 64px 0; }
+.section--orange { background: var(--orange-bg); }
+.section--sky    { background: var(--sky-bg); }
+.section--orange-strong { background: var(--orange); color: #fff; }
+
+/* ===== SECTION HEADING ===== */
+.sec-label {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .15em;
+  padding: 4px 12px;
+  border-radius: 40px;
+  margin-bottom: 14px;
+}
+.sec-label--white { background: #fff; color: var(--orange); }
+.sec-title {
+  font-size: clamp(24px, 6vw, 36px);
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+.sec-lead {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--text-md);
+}
+.sec-lead--white { color: rgba(255,255,255,.9); }
+.text-center { text-align: center; }
+
+/* ===== BUTTON ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: .05em;
+  padding: 18px 36px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: transform .15s, box-shadow .15s;
+  text-align: center;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.btn:active { transform: scale(.97); }
+.btn--main {
+  background: var(--red);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(224,58,47,.35);
+  width: 100%;
+}
+.btn--main:hover { box-shadow: 0 8px 28px rgba(224,58,47,.45); transform: translateY(-2px); }
+.btn--sub {
+  background: #fff;
+  color: var(--orange);
+  border: 2px solid var(--orange);
+  width: 100%;
+}
+
+/* ===== BADGE ===== */
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 900;
+  padding: 3px 10px;
+  border-radius: 4px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+.badge--sale   { background: var(--red); color: #fff; }
+.badge--rare   { background: var(--sky); color: #fff; }
+.badge--main   { background: var(--yellow); color: var(--text); }
+
+/* ===== ILLUSTRATION PLACEHOLDER ===== */
+/* ↓ AI生成イラストをimgタグのsrcに差し替えてください */
+.illust-box {
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: linear-gradient(160deg, #FFE5B4 0%, #FFD080 50%, #FFBC40 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: rgba(0,0,0,.35);
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-align: center;
+  line-height: 1.6;
+}
+.illust-box img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ===== STICKY CTA ===== */
+#sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 3px solid var(--orange);
+  padding: 12px 20px 16px;
+  z-index: 100;
+  transform: translateY(100%);
+  transition: transform .3s ease;
+  box-shadow: 0 -4px 20px rgba(0,0,0,.12);
+}
+#sticky-cta.visible { transform: translateY(0); }
+#sticky-cta .inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#sticky-cta .cta-text {
+  flex: 1;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text-md);
+}
+#sticky-cta .cta-text strong {
+  display: block;
+  font-size: 14px;
+  color: var(--red);
+  font-weight: 900;
+}
+#sticky-cta .btn {
+  width: auto;
+  flex-shrink: 0;
+  padding: 14px 24px;
+  font-size: 14px;
+}
+
+/* ===== HERO ===== */
+#hero {
+  background: linear-gradient(180deg, #FFF4CC 0%, #FFE090 100%);
+  padding: 0 0 40px;
+  overflow: hidden;
+}
+.hero-illust {
+  width: 100%;
+  aspect-ratio: 4/3;
+  max-height: 420px;
+  background: linear-gradient(160deg, #FFF0A0 0%, #FFD040 60%, #FF9020 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-illust img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-illust-placeholder {
+  text-align: center;
+  color: rgba(0,0,0,.4);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 2;
+  padding: 20px;
+}
+.hero-illust-placeholder .icon { font-size: 48px; display: block; margin-bottom: 8px; }
+.hero-body { padding: 28px 20px 0; text-align: center; max-width: var(--max); margin: 0 auto; }
+.hero-tag {
+  display: inline-block;
+  background: var(--orange);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .12em;
+  padding: 5px 16px;
+  border-radius: 40px;
+  margin-bottom: 16px;
+}
+.hero-title {
+  font-size: clamp(36px, 10vw, 56px);
+  font-weight: 900;
+  line-height: 1.15;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+.hero-title .accent { color: var(--orange); }
+.hero-sub {
+  font-size: 15px;
+  color: var(--text-md);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.hero-deadline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--red);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+  padding: 8px 20px;
+  border-radius: 40px;
+  margin-bottom: 20px;
+}
+.hero-countdown {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.countdown-block {
+  background: var(--text);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  text-align: center;
+  min-width: 64px;
+}
+.countdown-num {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+  display: block;
+}
+.countdown-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  opacity: .7;
+  margin-top: 4px;
+  display: block;
+}
+.hero-cta-area { padding-bottom: 4px; }
+.hero-note { font-size: 12px; color: var(--text-lt); margin-top: 10px; }
+
+/* ===== SIZE SECTION ===== */
+#size {
+  background-image: url('dekayama.jpg');
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+}
+#size::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 244, 224, 0.88);
+}
+#size .container {
+  position: relative;
+  z-index: 1;
+}
+.size-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 32px;
+}
+.size-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 24px 16px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--orange);
+}
+.size-card .icon { font-size: 40px; margin-bottom: 10px; }
+.size-card .num {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--orange);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+.size-card .desc {
+  font-size: 13px;
+  color: var(--text-md);
+  line-height: 1.5;
+}
+.size-compare {
+  margin-top: 24px;
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+.size-compare p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-md);
+  text-align: center;
+}
+.size-compare strong { color: var(--orange); font-weight: 900; }
+
+/* ===== FLOW SECTION ===== */
+.flow-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 32px;
+  position: relative;
+}
+.flow-list::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 40px;
+  bottom: 40px;
+  width: 3px;
+  background: var(--orange-lt);
+  border-radius: 4px;
+}
+.flow-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+  position: relative;
+}
+.flow-num {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--orange);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 900;
+  position: relative;
+  z-index: 1;
+}
+.flow-body .title {
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+.flow-body .desc {
+  font-size: 14px;
+  color: var(--text-md);
+  line-height: 1.7;
+}
+.flow-body .icon { font-size: 22px; float: right; margin-top: -4px; }
+
+/* ===== PLAN SECTION ===== */
+.plan-main {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 32px rgba(240,112,32,.2);
+  border: 3px solid var(--orange);
+  overflow: hidden;
+  margin-top: 32px;
+}
+.plan-main-header {
+  background: var(--orange);
+  color: #fff;
+  padding: 20px 24px;
+  text-align: center;
+}
+.plan-main-header .recommend {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 900;
+  padding: 3px 12px;
+  border-radius: 40px;
+  margin-bottom: 10px;
+}
+.plan-main-header .name {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+.plan-main-header .price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+}
+.plan-main-header .price {
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1;
+}
+.plan-main-header .price-note {
+  font-size: 13px;
+  opacity: .85;
+  line-height: 1.4;
+}
+.plan-main-header .original {
+  font-size: 15px;
+  text-decoration: line-through;
+  opacity: .65;
+}
+.plan-main-body { padding: 24px; }
+.plan-includes {
+  list-style: none;
+  margin-bottom: 20px;
+}
+.plan-includes li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  padding: 8px 0;
+  border-bottom: 1px solid #F0EDE8;
+}
+.plan-includes li:last-child { border-bottom: none; }
+.plan-includes li .check { color: var(--green); font-size: 18px; flex-shrink: 0; }
+.plan-cap {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-md);
+  margin-bottom: 20px;
+}
+.plan-cap strong { color: var(--red); }
+
+.plan-others {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 24px;
+}
+.plan-other-card {
+  background: #fff;
+  border: 2px solid #E8E0D8;
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  text-align: center;
+}
+.plan-other-card .name {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text-md);
+}
+.plan-other-card .price {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.plan-other-card .desc {
+  font-size: 11px;
+  color: var(--text-lt);
+  line-height: 1.5;
+}
+
+/* ===== SAFETY SECTION ===== */
+.faq-list {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.faq-item {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  text-align: left;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--text);
+}
+.faq-q .q-icon {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  background: var(--sky);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 900;
+}
+.faq-q .arrow {
+  margin-left: auto;
+  font-size: 14px;
+  color: var(--text-lt);
+  transition: transform .2s;
+}
+.faq-item.open .arrow { transform: rotate(180deg); }
+.faq-a {
+  display: none;
+  padding: 0 20px 20px 64px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text-md);
+}
+.faq-item.open .faq-a { display: block; }
+
+/* ===== GOODS SECTION ===== */
+.goods-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-top: 24px;
+}
+.goods-illust {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #FFE090 0%, #FFBB40 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(0,0,0,.35);
+  text-align: center;
+  line-height: 2;
+}
+.goods-illust img { width: 100%; height: 100%; object-fit: cover; }
+.goods-body { padding: 24px; }
+.goods-body .name {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+.goods-body .price-row {
+  font-size: 15px;
+  color: var(--text-md);
+  margin-bottom: 12px;
+}
+.goods-body .price-row strong { color: var(--orange); font-size: 22px; }
+.goods-body .desc {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text-md);
+}
+.goods-note {
+  margin-top: 16px;
+  background: var(--orange-bg);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  font-size: 13px;
+  color: var(--text-md);
+  line-height: 1.7;
+}
+
+/* ===== HOW TO BUY ===== */
+.howto-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+.howto-step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+.howto-step .num {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: var(--sky);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 900;
+}
+.howto-step .body .title {
+  font-size: 15px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+.howto-step .body .desc {
+  font-size: 13px;
+  color: var(--text-md);
+  line-height: 1.7;
+}
+.howto-step .icon { font-size: 28px; margin-left: auto; flex-shrink: 0; }
+
+/* ===== FINAL CTA ===== */
+#cta-final {
+  background: linear-gradient(160deg, var(--orange) 0%, #E05010 100%);
+  color: #fff;
+  padding: 64px 0;
+  text-align: center;
+}
+#cta-final .title {
+  font-size: clamp(22px, 6vw, 32px);
+  font-weight: 900;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+#cta-final .sub {
+  font-size: 15px;
+  opacity: .9;
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+#cta-final .deadline {
+  display: inline-block;
+  background: rgba(255,255,255,.2);
+  border: 2px solid rgba(255,255,255,.6);
+  border-radius: 40px;
+  padding: 8px 24px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--text);
+  color: rgba(255,255,255,.6);
+  text-align: center;
+  padding: 32px 20px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .size-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .plan-others { grid-template-columns: 1fr; }
+  .countdown-block { min-width: 54px; padding: 8px 10px; }
+  .countdown-num { font-size: 24px; }
+}
+@media (min-width: 600px) {
+  .flow-list::before { left: 32px; }
+  .flow-num { width: 48px; height: 48px; font-size: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== STICKY CTA ========== -->
+<div id="sticky-cta">
+  <div class="inner">
+    <div class="cta-text">
+      <strong>🔥 先行割引 4/8（日）まで</strong>
+      <ruby>曳<rt>ひ</rt></ruby>き手プラン ¥4,050〜
+    </div>
+    <a href="#plans" class="btn btn--main" style="padding:12px 20px;font-size:13px;">
+      チケットを見る
+    </a>
+  </div>
+</div>
+
+<!-- ========== HERO ========== -->
+<section id="hero">
+
+  <!-- ↓ AI生成イラスト差し替えエリア（推奨：横長4:3、PNG/JPG） -->
+  <div class="hero-illust">
+    <img
+      src="hero_illust.png"
+      alt="子どもたちがカラフルな手ぬぐいを巻いて、大きなでかやまのロープを一生懸命引っ張っているイラスト"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+    >
+    <div class="hero-illust-placeholder" style="display:none;">
+      <span class="icon">🎪</span>
+      【AI生成イラスト】<br>
+      子どもたちが大きなでかやまを<br>
+      みんなで引っ張っているイラスト<br>
+      <small>（hero_illust.png に差し替え）</small>
+    </div>
+  </div>
+  <!-- ↑ AI生成イラスト差し替えエリアここまで -->
+
+  <div class="hero-body">
+    <div class="hero-tag">🎉 青柏祭2026 家族体験チケット</div>
+
+    <h1 class="hero-title">
+      みんなで<br>
+      <span class="accent">ひこう！</span>
+    </h1>
+
+    <p class="hero-sub">
+      高さ12m・重さ20トンの山車を、<br>
+      家族みんなの力で動かそう。<br>
+      <strong>子ども大歓迎。</strong>石川県七尾市。
+    </p>
+
+    <div class="hero-deadline">
+      ⏰ 先行割引は 4月8日（日）23:59 まで
+    </div>
+
+    <div class="hero-countdown" id="countdown">
+      <div class="countdown-block">
+        <span class="countdown-num" id="cd-d">-</span>
+        <span class="countdown-label">日</span>
+      </div>
+      <div class="countdown-block">
+        <span class="countdown-num" id="cd-h">-</span>
+        <span class="countdown-label">時間</span>
+      </div>
+      <div class="countdown-block">
+        <span class="countdown-num" id="cd-m">-</span>
+        <span class="countdown-label">分</span>
+      </div>
+      <div class="countdown-block">
+        <span class="countdown-num" id="cd-s">-</span>
+        <span class="countdown-label">秒</span>
+      </div>
+    </div>
+
+    <div class="hero-cta-area">
+      <!-- ↓ ほくさん！アプリのURLに差し替えてください -->
+      <a href="#howto" class="btn btn--main">
+        🎫 チケットを申し込む（先行10%OFF）
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SIZE ========== -->
+<section class="section section--orange" id="size">
+  <div class="container">
+    <div class="text-center">
+      <span class="sec-label">🐘 でかやまってどのくらい大きい？</span>
+      <h2 class="sec-title">「でかやま」は<br>ほんとうに、でかい。</h2>
+    </div>
+
+    <div class="size-grid">
+      <div class="size-card">
+        <div class="icon">🏢</div>
+        <div class="num">12m</div>
+        <div class="desc">4階建てビルと<br>おなじ高さ</div>
+      </div>
+      <div class="size-card">
+        <div class="icon">🐘</div>
+        <div class="num">20t</div>
+        <div class="desc">アフリカゾウ<br>約3頭ぶんの重さ</div>
+      </div>
+      <div class="size-card">
+        <div class="icon"><img src="でかやまのイラスト.png" alt="でかやまのイラスト" style="width:52px;height:auto;margin:0 auto 4px;"></div>
+        <div class="num">3台</div>
+        <div class="desc">七尾市内に<br>3台が存在</div>
+      </div>
+      <div class="size-card">
+        <div class="icon">🌍</div>
+        <div class="num">ユネスコ</div>
+        <div class="desc">ユネスコ無形文化遺産<br>＆国の重要無形民俗文化財</div>
+      </div>
+    </div>
+
+    <div class="size-compare">
+      <p>
+        そんな山車を、<strong>みんなで綱を引っ張って動かします。</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FLOW ========== -->
+<section class="section" id="flow">
+  <div class="container">
+    <div class="text-center">
+      <span class="sec-label">📅 当日はどんな感じ？</span>
+      <h2 class="sec-title">1日の流れ</h2>
+      <p class="sec-lead">
+        はじめての方も安心。<br>スタッフが丁寧にご案内します。
+      </p>
+    </div>
+
+    <div class="flow-list">
+      <div class="flow-item">
+        <div class="flow-num">1</div>
+        <div class="flow-body">
+          <div class="icon">👋</div>
+          <div class="title">受付・集合</div>
+          <div class="desc">スタッフがお出迎え。チケットの確認をして、当日の流れをご説明します。</div>
+        </div>
+      </div>
+      <div class="flow-item" style="background:linear-gradient(rgba(255,255,255,0.82),rgba(255,255,255,0.82)) center/cover, url('手ぬぐい背景.png') center/cover;">
+        <div class="flow-num">2</div>
+        <div class="flow-body">
+          <div class="icon">🎽</div>
+          <div class="title">手ぬぐいを受け取る</div>
+          <div class="desc">チケットに付属の手ぬぐいをお渡しします。首に巻いて、<ruby>曳<rt>ひ</rt></ruby>き手衆の仲間入り！</div>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-num">3</div>
+        <div class="flow-body">
+          <div class="icon">💪</div>
+          <div class="title">みんなで<ruby>曳<rt>ひ</rt></ruby>く！</div>
+          <div class="desc">いよいよ本番。合図とともに、みんなで綱を引っ張ります。声を合わせて、全力で！</div>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-num">4</div>
+        <div class="flow-body">
+          <div class="icon">📸</div>
+          <div class="title">記念撮影</div>
+          <div class="desc">でかやまをバックに記念写真を。「<ruby>曳<rt>ひ</rt></ruby>いたよ！」という思い出を形に残してください。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PLANS ========== -->
+<section class="section section--orange" id="plans">
+  <div class="container">
+    <div class="text-center">
+      <span class="sec-label">🎫 チケットプラン</span>
+      <h2 class="sec-title">ファミリーには<br>これがおすすめ！</h2>
+    </div>
+
+    <!-- プランA メイン -->
+    <div class="plan-main">
+      <div class="plan-main-header">
+        <div class="recommend">👨‍👩‍👧‍👦 ファミリーおすすめ</div>
+        <div class="name"><ruby>曳<rt>ひ</rt></ruby>き手プラン</div>
+        <div class="price-row">
+          <span class="price">¥4,050</span>
+          <div class="price-note">
+            <span class="original">定価¥4,500</span><br>
+            先行10%OFF
+          </div>
+        </div>
+      </div>
+      <div class="plan-main-body">
+        <ul class="plan-includes">
+          <li><span class="check">✓</span> でかやま<ruby>曳<rt>ひ</rt></ruby>き手体験（当日）</li>
+          <li><span class="check">✓</span> オリジナル手ぬぐい（¥2,200相当）</li>
+          <li><span class="check">✓</span> スタッフによる安全サポート</li>
+        </ul>
+        <p class="plan-cap">定員 <strong>120名</strong>（先着順）</p>
+        <!-- ↓ ほくさん！アプリのURLに差し替えてください -->
+        <a href="#howto" class="btn btn--main">
+          🎫 このプランを申し込む
+        </a>
+      </div>
+    </div>
+
+    <!-- プランB・C（サブ） -->
+    <p style="text-align:center;font-size:13px;color:var(--text-md);margin:24px 0 12px;">他のプランも見る</p>
+    <div class="plan-others">
+      <div class="plan-other-card">
+        <div class="name">前夜<ruby>曳<rt>ひ</rt></ruby>き手プラン</div>
+        <div class="price">¥6,700</div>
+        <div class="desc">前夜祭も参加できる<br>2日間体験プラン</div>
+      </div>
+      <div class="plan-other-card">
+        <div class="name">プレミアムYOBAREプラン</div>
+        <div class="price">¥13,500</div>
+        <div class="desc">地酒・刺身・木遣り歌<br>能登を丸ごと体験</div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:12px;color:var(--text-lt);margin-top:12px;">
+      ※先行割引は4月8日（日）23:59まで
+    </p>
+  </div>
+</section>
+
+<!-- ========== SAFETY ========== -->
+<section class="section section--sky" id="safety">
+  <div class="container">
+    <div class="text-center">
+      <span class="sec-label">✅ よくある質問</span>
+      <h2 class="sec-title">子どもも<ruby>曳<rt>ひ</rt></ruby>けるの？</h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="q-icon">Q</span>
+          子どもも参加できますか？
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          はい、小さなお子さんも保護者の方と一緒であれば参加できます。
+          綱を引っ張るだけなので、難しいことはありません。
+          みんなで声を合わせて引っ張るのが醍醐味です！
+          <!-- ↑ 年齢制限など正確な情報に差し替えてください -->
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="q-icon">Q</span>
+          危なくないですか？
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          当日はスタッフが常に安全を確認しながら進行します。
+          小さなお子さんや初めての方でも安心してご参加いただけます。
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="q-icon">Q</span>
+          何を着ていけばいいですか？
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          動きやすい服装であれば何でもOKです。
+          チケットに付属の手ぬぐいを首に巻いて参加してください。
+          <strong>ヒールやサンダルは避け、必ず運動靴でお越しください。</strong>
+          5月初旬の七尾は昼間は暖かいですが、
+          朝夕は少し肌寒いこともあるので1枚羽織るものがあると安心です。
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="q-icon">Q</span>
+          雨の場合はどうなりますか？
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          青柏祭は小雨決行です。大雨・荒天の場合は主催側の判断で変更となる場合があります。
+          詳細は公式サイトまたはほくさん！アプリでご確認ください。
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="q-icon">Q</span>
+          チケットはどこで購入できますか？
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          「ほくさん！」アプリからお申し込みいただけます。
+          iPhoneはApp Store、AndroidはGoogle Playからダウンロードできます。
+          アプリが難しい場合はお問い合わせください。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== GOODS ========== -->
+<section class="section" id="goods">
+  <div class="container">
+    <div class="text-center">
+      <span class="sec-label">🎁 お揃いグッズ</span>
+      <h2 class="sec-title">家族みんなで<br>お揃いの手ぬぐいを。</h2>
+      <p class="sec-lead">
+        チケットには手ぬぐいが付属。<br>
+        追加で欲しい方は当日会場でも販売します。
+      </p>
+    </div>
+
+    <div class="goods-card">
+      <!-- ↓ グッズ写真に差し替えてください -->
+      <div class="goods-illust">
+        <img
+          src="tenugui.jpg"
+          alt="青柏祭オリジナル手ぬぐい"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+        <div style="display:none;width:100%;height:100%;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:rgba(0,0,0,.35);flex-direction:column;gap:8px;">
+          <span style="font-size:40px;">🎽</span>
+          オリジナル手ぬぐい写真<br>
+          <small>（tenugui.jpg に差し替え）</small>
+        </div>
+      </div>
+      <div class="goods-body">
+        <div class="name">青柏祭 オリジナル手ぬぐい</div>
+        <div class="price-row">当日会場販売 <strong>¥2,200</strong></div>
+        <div class="desc">
+          でかやまをモチーフにデザインした手ぬぐいです。
+          <ruby>曳<rt>ひ</rt></ruby>き手証として首に巻いて参加するのはもちろん、
+          家に帰ってからも飾ったり使ったりできます。
+        </div>
+        <div class="goods-note">
+          💡 チケットには手ぬぐい1枚が付属します。<br>
+          お子さんの分など追加で欲しい方は当日会場でお買い求めいただけます。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HOW TO BUY ========== -->
+<section class="section section--orange" id="howto">
+  <div class="container">
+    <div class="text-center">
+      <span class="sec-label">📱 購入方法</span>
+      <h2 class="sec-title">3ステップで<br>申し込み完了！</h2>
+    </div>
+
+    <div class="howto-steps">
+      <div class="howto-step">
+        <div class="num">1</div>
+        <div class="body">
+          <div class="title">「ほくさん！」アプリをダウンロード</div>
+          <div class="desc">
+            App Store または Google Play で「ほくさん！」を検索してインストール。
+          </div>
+        </div>
+        <div class="icon">📱</div>
+      </div>
+      <div class="howto-step">
+        <div class="num">2</div>
+        <div class="body">
+          <div class="title">チケットページを開いてプランを選択</div>
+          <div class="desc">
+            アプリ内で「青柏祭 体験チケット」を検索。プランAを選んで申し込みへ。
+          </div>
+        </div>
+        <div class="icon">🎫</div>
+      </div>
+      <div class="howto-step">
+        <div class="num">3</div>
+        <div class="body">
+          <div class="title">お支払いして申し込み完了！</div>
+          <div class="desc">
+            クレジットカードで決済完了。チケットはアプリに届きます。当日はアプリを見せてください。
+          </div>
+        </div>
+        <div class="icon">✅</div>
+      </div>
+    </div>
+
+    <div style="background:#fff;border-radius:var(--radius);padding:20px;margin-top:24px;box-shadow:var(--shadow);">
+      <p style="font-size:14px;font-weight:900;margin-bottom:8px;">📲 ダウンロードはこちら</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <!-- ↓ App Store / Google Play の正式URLに差し替えてください -->
+        <a href="#" class="btn btn--sub" style="font-size:13px;padding:12px 16px;">
+          🍎 iPhone (App Store)
+        </a>
+        <a href="#" class="btn btn--sub" style="font-size:13px;padding:12px 16px;">
+          🤖 Android (Google Play)
+        </a>
+      </div>
+      <p style="font-size:12px;color:var(--text-lt);margin-top:12px;text-align:center;">
+        アプリのダウンロードが難しい場合はお問い合わせください。<br>
+        <!-- ↓ 連絡先に差し替えてください -->
+        お問い合わせ：<a href="mailto:info@sandboxconnections.jp" style="color:var(--orange);">info@sandboxconnections.jp</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <p>主催：のとくる？ / SandBoxConnections合同会社</p>
+  <p>石川県七尾市 ／ 青柏祭2026</p>
+  <p style="margin-top:12px;">
+    <!-- ↓ 連絡先・SNSに差し替えてください -->
+    <a href="mailto:info@sandboxconnections.jp">お問い合わせ</a>
+  </p>
+  <p style="margin-top:12px;font-size:11px;">
+    © 2026 SandBoxConnections LLC. All rights reserved.
+  </p>
+</footer>
+
+<!-- ========== JS ========== -->
+<script>
+// --- カウントダウン ---
+function updateCountdown() {
+  const deadline = new Date('2026-04-08T23:59:00+09:00');
+  const now = new Date();
+  const diff = deadline - now;
+
+  if (diff <= 0) {
+    document.getElementById('countdown').innerHTML =
+      '<p style="font-weight:900;color:var(--red);">先行割引期間は終了しました</p>';
+    return;
+  }
+
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff % 86400000) / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
+
+  document.getElementById('cd-d').textContent = String(d).padStart(2,'0');
+  document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
+  document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
+  document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// --- スティッキーCTA ---
+const stickyCta = document.getElementById('sticky-cta');
+const hero = document.getElementById('hero');
+const observer = new IntersectionObserver(([e]) => {
+  stickyCta.classList.toggle('visible', !e.isIntersecting);
+}, { threshold: 0 });
+observer.observe(hero);
+
+// --- FAQアコーディオン ---
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+
+</body>
+</html>

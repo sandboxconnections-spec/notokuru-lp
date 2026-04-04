@@ -197,13 +197,20 @@ a { color: inherit; text-decoration: none; }
 }
 .hero-illust {
   width: 100%;
-  aspect-ratio: 4/3;
-  max-height: 420px;
-  background: linear-gradient(160deg, #FFF0A0 0%, #FFD040 60%, #FF9020 100%);
+  aspect-ratio: 16/9;
+  max-height: 500px;
+  background: #000;
   position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.hero-illust video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .hero-illust img {
   width: 100%;
@@ -728,7 +735,14 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
 <section id="hero">
 
   <div class="hero-illust">
-    <img src="dekayama.jpg" alt="青柏祭でかやまの様子">
+    <video
+      src="コンポ 1.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="dekayama.jpg"
+    ></video>
   </div>
 
   <div class="hero-body">

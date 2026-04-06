@@ -1000,7 +1000,7 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
         <div class="faq-a">
           「ほくさん！」アプリからお申し込みいただけます。
           iPhoneはApp Store、AndroidはGoogle Playからダウンロードできます。
-          アプリが難しい方もご購入いただけます。詳細は青柏祭公式サイトをご確認ください。
+          アプリが難しい方は<a href="https://docs.google.com/forms/d/1IFiQzhorHY6xLL6Dwp8dT2DeSBBWjTcF7LMSVl9eUc8/viewform" target="_blank" rel="noopener" style="color:var(--orange);font-weight:900;">仮予約フォーム（銀行振込）</a>からもお申し込みいただけます。
         </div>
       </div>
     </div>
@@ -1020,18 +1020,12 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
     </div>
 
     <div class="goods-card">
-      <!-- ↓ グッズ写真に差し替えてください -->
       <div class="goods-illust">
         <img
-          src="tenugui.jpg"
+          src="手拭い.png"
           alt="青柏祭オリジナル手ぬぐい"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          style="width:100%;height:100%;object-fit:cover;"
         >
-        <div style="display:none;width:100%;height:100%;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:rgba(0,0,0,.35);flex-direction:column;gap:8px;">
-          <span style="font-size:40px;">🎽</span>
-          オリジナル手ぬぐい写真<br>
-          <small>（tenugui.jpg に差し替え）</small>
-        </div>
       </div>
       <div class="goods-body">
         <div class="name">【寄附つき】青柏祭 オリジナル手ぬぐい</div>
@@ -1091,23 +1085,76 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
       </div>
     </div>
 
-    <div style="background:#fff;border-radius:var(--radius);padding:20px;margin-top:24px;box-shadow:var(--shadow);">
-      <p style="font-size:14px;font-weight:900;margin-bottom:8px;">📲 ダウンロードはこちら</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-        <a href="https://apps.apple.com/jp/app/%E3%81%BB%E3%81%8F%E3%81%95%E3%82%93/id6745260910" class="btn btn--sub" style="font-size:13px;padding:12px 16px;" target="_blank" rel="noopener">
-          🍎 iPhone (App Store)
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=tokyo.eventos.hokusan&utm_source=ig&utm_medium=social&utm_content=link_in_bio" class="btn btn--sub" style="font-size:13px;padding:12px 16px;" target="_blank" rel="noopener">
-          🤖 Android (Google Play)
+    <!-- ===== 購入方法 2択ボックス ===== -->
+    <div style="background:#fff;border-radius:var(--radius);padding:24px;margin-top:24px;box-shadow:var(--shadow);">
+
+      <!-- ① アプリ購入（推奨） -->
+      <div style="border:2px solid var(--orange);border-radius:var(--radius);padding:16px;margin-bottom:16px;">
+        <p style="font-size:13px;font-weight:900;color:var(--orange);margin-bottom:10px;">① アプリで購入（推奨・すぐ決済）</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <a href="https://apps.apple.com/jp/app/%E3%81%BB%E3%81%8F%E3%81%95%E3%82%93/id6745260910" class="btn btn--sub" style="font-size:13px;padding:12px 16px;" target="_blank" rel="noopener">
+            🍎 iPhone (App Store)
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=tokyo.eventos.hokusan&utm_source=ig&utm_medium=social&utm_content=link_in_bio" class="btn btn--sub" style="font-size:13px;padding:12px 16px;" target="_blank" rel="noopener">
+            🤖 Android (Google Play)
+          </a>
+        </div>
+      </div>
+
+      <!-- ② フォーム仮予約（アプリが難しい方） -->
+      <div style="border:2px solid #ddd;border-radius:var(--radius);padding:16px;">
+        <p style="font-size:13px;font-weight:900;color:var(--text-md);margin-bottom:4px;">② アプリが難しい方はフォームで仮予約</p>
+        <p style="font-size:11px;color:var(--text-lt);margin-bottom:10px;">※ ご記入後に振込先をご案内します。入金確認で申し込み完了。キャンセル不可。</p>
+        <a href="https://docs.google.com/forms/d/1IFiQzhorHY6xLL6Dwp8dT2DeSBBWjTcF7LMSVl9eUc8/viewform" class="btn btn--sub" style="font-size:13px;padding:12px 16px;width:100%;" target="_blank" rel="noopener">
+          📝 仮予約フォームへ（銀行振込）
         </a>
       </div>
-      <p style="font-size:12px;color:var(--text-lt);margin-top:12px;text-align:center;">
-        アプリが難しい方もご購入いただけます。詳細は青柏祭公式サイトをご確認ください。
-      </p>
+
     </div>
   </div>
 </section>
 
+
+<!-- ========== 曳き手召喚CTA ========== -->
+<section class="section" id="join" style="background:linear-gradient(160deg,#1a0a00 0%,#3d1a00 100%);color:#fff;">
+  <div class="container" style="text-align:center;">
+    <span class="sec-label" style="background:rgba(255,255,255,.15);color:#FFD12E;">🎋 曳き手衆への招待</span>
+    <h2 class="sec-title" style="color:#fff;margin-top:12px;">あなたを、<br>曳き手衆に招きます。</h2>
+    <p style="color:rgba(255,255,255,.75);margin-bottom:28px;font-size:15px;">お名前を入れて、申し込みへ進んでください。<br><small>（ニックネームでもOKです）</small></p>
+
+    <div style="max-width:380px;margin:0 auto;">
+      <input
+        type="text"
+        id="nickname-input"
+        placeholder="例：りょうた、田中、TARO…"
+        maxlength="30"
+        style="
+          width:100%;
+          padding:16px 20px;
+          font-size:17px;
+          font-family:inherit;
+          border:none;
+          border-radius:var(--radius);
+          text-align:center;
+          outline:none;
+          margin-bottom:14px;
+          box-shadow:0 4px 24px rgba(0,0,0,.3);
+        "
+      >
+      <button
+        id="join-btn"
+        class="btn btn--main"
+        style="width:100%;font-size:16px;padding:18px;"
+        onclick="handleJoin()"
+      >
+        曳き手として申し込む →
+      </button>
+    </div>
+    <p style="font-size:12px;color:rgba(255,255,255,.4);margin-top:16px;">
+      名前の入力は任意です。ほくさん！アプリでのご購入に進みます。
+    </p>
+  </div>
+</section>
 
 <!-- ========== FOOTER ========== -->
 <footer>
@@ -1162,6 +1209,37 @@ document.querySelectorAll('.faq-q').forEach(btn => {
     if (!isOpen) item.classList.add('open');
   });
 });
+
+// --- ニックネーム入力 → ボタンテキスト動的更新 ---
+const nicknameInput = document.getElementById('nickname-input');
+const joinBtn       = document.getElementById('join-btn');
+
+nicknameInput.addEventListener('input', () => {
+  const name = nicknameInput.value.trim();
+  joinBtn.textContent = name
+    ? `${name}さんの曳き手証を申し込む →`
+    : '曳き手として申し込む →';
+});
+
+// --- Googleフォームへサイレント送信 → ほくさん！へスクロール ---
+// ★ 設定: Googleフォーム作成後に下記2つを差し替えてください ★
+const GOOGLE_FORM_ID    = 'YOUR_FORM_ID';       // フォームIDに置き換え
+const GOOGLE_ENTRY_NAME = 'entry.YOUR_ENTRY_ID'; // 「名前」質問のエントリIDに置き換え
+
+function handleJoin() {
+  const name = nicknameInput.value.trim();
+
+  // Googleフォームが設定済みの場合のみ送信
+  if (GOOGLE_FORM_ID !== 'YOUR_FORM_ID' && name) {
+    const url = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/formResponse`;
+    const body = new FormData();
+    body.append(GOOGLE_ENTRY_NAME, name);
+    fetch(url, { method: 'POST', body, mode: 'no-cors' }).catch(() => {});
+  }
+
+  // ほくさん！ダウンロードセクションへスクロール
+  document.getElementById('howto').scrollIntoView({ behavior: 'smooth' });
+}
 </script>
 
 </body>

@@ -1114,48 +1114,6 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
   </div>
 </section>
 
-
-<!-- ========== 曳き手召喚CTA ========== -->
-<section class="section" id="join" style="background:linear-gradient(160deg,#1a0a00 0%,#3d1a00 100%);color:#fff;">
-  <div class="container" style="text-align:center;">
-    <span class="sec-label" style="background:rgba(255,255,255,.15);color:#FFD12E;">🎋 曳き手衆への招待</span>
-    <h2 class="sec-title" style="color:#fff;margin-top:12px;">あなたを、<br>曳き手衆に招きます。</h2>
-    <p style="color:rgba(255,255,255,.75);margin-bottom:28px;font-size:15px;">お名前を入れて、申し込みへ進んでください。<br><small>（ニックネームでもOKです）</small></p>
-
-    <div style="max-width:380px;margin:0 auto;">
-      <input
-        type="text"
-        id="nickname-input"
-        placeholder="例：りょうた、田中、TARO…"
-        maxlength="30"
-        style="
-          width:100%;
-          padding:16px 20px;
-          font-size:17px;
-          font-family:inherit;
-          border:none;
-          border-radius:var(--radius);
-          text-align:center;
-          outline:none;
-          margin-bottom:14px;
-          box-shadow:0 4px 24px rgba(0,0,0,.3);
-        "
-      >
-      <button
-        id="join-btn"
-        class="btn btn--main"
-        style="width:100%;font-size:16px;padding:18px;"
-        onclick="handleJoin()"
-      >
-        曳き手として申し込む →
-      </button>
-    </div>
-    <p style="font-size:12px;color:rgba(255,255,255,.4);margin-top:16px;">
-      名前の入力は任意です。ほくさん！アプリでのご購入に進みます。
-    </p>
-  </div>
-</section>
-
 <!-- ========== FOOTER ========== -->
 <footer>
   <p>主催：YOBARE</p>
@@ -1210,36 +1168,6 @@ document.querySelectorAll('.faq-q').forEach(btn => {
   });
 });
 
-// --- ニックネーム入力 → ボタンテキスト動的更新 ---
-const nicknameInput = document.getElementById('nickname-input');
-const joinBtn       = document.getElementById('join-btn');
-
-nicknameInput.addEventListener('input', () => {
-  const name = nicknameInput.value.trim();
-  joinBtn.textContent = name
-    ? `${name}さんの曳き手証を申し込む →`
-    : '曳き手として申し込む →';
-});
-
-// --- Googleフォームへサイレント送信 → ほくさん！へスクロール ---
-// ★ 設定: Googleフォーム作成後に下記2つを差し替えてください ★
-const GOOGLE_FORM_ID    = 'YOUR_FORM_ID';       // フォームIDに置き換え
-const GOOGLE_ENTRY_NAME = 'entry.YOUR_ENTRY_ID'; // 「名前」質問のエントリIDに置き換え
-
-function handleJoin() {
-  const name = nicknameInput.value.trim();
-
-  // Googleフォームが設定済みの場合のみ送信
-  if (GOOGLE_FORM_ID !== 'YOUR_FORM_ID' && name) {
-    const url = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/formResponse`;
-    const body = new FormData();
-    body.append(GOOGLE_ENTRY_NAME, name);
-    fetch(url, { method: 'POST', body, mode: 'no-cors' }).catch(() => {});
-  }
-
-  // ほくさん！ダウンロードセクションへスクロール
-  document.getElementById('howto').scrollIntoView({ behavior: 'smooth' });
-}
 </script>
 
 </body>

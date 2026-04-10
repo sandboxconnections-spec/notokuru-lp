@@ -662,6 +662,56 @@ a { color: inherit; text-decoration: none; }
 }
 .howto-step .icon { font-size: 28px; margin-left: auto; flex-shrink: 0; }
 
+/* ===== SCHEDULE SECTION ===== */
+.schedule-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 32px;
+}
+.schedule-day {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.schedule-day-header {
+  background: var(--orange);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+  padding: 12px 20px;
+  letter-spacing: .05em;
+}
+.schedule-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px 20px;
+}
+.schedule-slot {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--orange-bg);
+  border: 2px solid var(--orange-lt);
+  border-radius: 40px;
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--text);
+  padding: 8px 18px;
+}
+.schedule-slot .time-icon { font-size: 16px; }
+.schedule-note {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-md);
+  margin-top: 16px;
+  background: var(--sky-bg);
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+}
+
 /* ===== FINAL CTA ===== */
 #cta-final {
   background: linear-gradient(160deg, var(--orange) 0%, #E05010 100%);
@@ -854,7 +904,7 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
         <div class="flow-num">2</div>
         <div class="flow-body">
           <div class="icon">🎽</div>
-          <div class="title">手ぬぐいを受け取る</div>
+          <div class="title">「でかやま」について学び、手ぬぐいを受け取る<span style="font-size:13px;font-weight:400;color:var(--text-lt);">（10分程度）</span></div>
           <div class="desc">チケットに付属の手ぬぐいをお渡しします。首に巻いて、<ruby>曳<rt>ひ</rt></ruby>き手衆の仲間入り！</div>
         </div>
       </div>
@@ -875,6 +925,37 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ========== SCHEDULE ========== -->
+<section class="section" id="schedule">
+  <div class="container">
+    <div class="text-center">
+      <span class="sec-label">🗓 開催スケジュール</span>
+      <h2 class="sec-title">参加できる日程・時間</h2>
+      <p class="sec-lead">所要時間は1時間〜1時間半です。</p>
+    </div>
+
+    <div class="schedule-grid">
+      <div class="schedule-day">
+        <div class="schedule-day-header">5月4日（日）</div>
+        <div class="schedule-slots">
+          <div class="schedule-slot"><span class="time-icon">🕖</span>7:30〜 の回</div>
+        </div>
+      </div>
+      <div class="schedule-day">
+        <div class="schedule-day-header">5月5日（月・祝）</div>
+        <div class="schedule-slots">
+          <div class="schedule-slot"><span class="time-icon">🕗</span>8:30〜 の回</div>
+          <div class="schedule-slot"><span class="time-icon">🕚</span>11:20〜 の回</div>
+          <div class="schedule-slot"><span class="time-icon">🕑</span>14:00〜 の回</div>
+          <div class="schedule-slot"><span class="time-icon">🕒</span>15:20〜 の回</div>
+          <div class="schedule-slot"><span class="time-icon">🕖</span>19:20〜 の回</div>
+        </div>
+      </div>
+    </div>
+    <p class="schedule-note">⏱ 所要時間：1時間〜1時間半　／　各回定員あり・先着順</p>
   </div>
 </section>
 
@@ -914,12 +995,12 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
     </div>
 
     <!-- プランB・C（サブ） -->
-    <p style="text-align:center;font-size:13px;color:var(--text-md);margin:24px 0 12px;">他のプランも見る</p>
+    <p style="text-align:center;font-size:13px;color:var(--text-md);margin:24px 0 12px;">他のプランは、「ほくさん！」アプリから見ることができます。</p>
     <div class="plan-others">
       <div class="plan-other-card">
         <div class="name">前夜<ruby>曳<rt>ひ</rt></ruby>き手プラン</div>
         <div class="price">¥6,700</div>
-        <div class="desc">前夜祭も参加できる<br>2日間体験プラン</div>
+        <div class="desc">完成したての「でかやま」を<br>曳くことができる特別プラン</div>
       </div>
       <div class="plan-other-card">
         <div class="name">プレミアムYOBAREプラン</div>
@@ -1014,8 +1095,8 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
       <span class="sec-label">🎁 お揃いグッズ</span>
       <h2 class="sec-title">家族みんなで<br>お揃いの手ぬぐいを。</h2>
       <p class="sec-lead">
-        チケットには手ぬぐいが付属。<br>
-        追加で欲しい方は当日会場でも販売します。
+        チケットには手ぬぐいがついてきます。<br>
+        追加で欲しい方は、当日会場でも買うことができます。
       </p>
     </div>
 

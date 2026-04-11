@@ -790,6 +790,68 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
   </div>
 </div>
 
+<!-- ========== HERO C案（一般向け・ダーク） ========== -->
+<section id="hero-c" style="display:none;background:#0D0D0D;color:#fff;padding:0 0 52px;overflow:hidden;">
+
+  <!-- 動画プレースホルダー（後で差し替え） -->
+  <div style="width:100%;aspect-ratio:9/16;max-height:90vh;background:#161616;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border-bottom:1px solid #222;">
+    <div style="font-size:52px;opacity:.25;">🎬</div>
+    <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.2);letter-spacing:.1em;">VIDEO PLACEHOLDER</div>
+  </div>
+
+  <div style="padding:40px 20px 0;text-align:center;max-width:720px;margin:0 auto;">
+
+    <!-- ラベル -->
+    <div style="display:inline-block;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.6);font-size:11px;font-weight:900;letter-spacing:.18em;padding:5px 18px;border-radius:40px;margin-bottom:28px;">
+      SEIHAKUSAI 2026 ／ UNESCO無形文化遺産
+    </div>
+
+    <!-- メインコピー -->
+    <h1 style="font-size:clamp(40px,11vw,72px);font-weight:900;line-height:1.05;letter-spacing:-.02em;margin-bottom:22px;color:#fff;">
+      重さ20トンを<br>曳く。
+    </h1>
+
+    <!-- サブコピー -->
+    <p style="font-size:15px;line-height:2;color:rgba(255,255,255,.6);margin-bottom:12px;">
+      観客ではなく、<strong style="color:#fff;font-weight:900;">"曳き手"</strong>として参加する体験チケット。
+    </p>
+    <p style="font-size:13px;color:rgba(255,255,255,.35);margin-bottom:36px;letter-spacing:.05em;">
+      青柏祭2026 ／ 石川県七尾市
+    </p>
+
+    <!-- 日程バッジ -->
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(240,112,32,.15);border:1px solid rgba(240,112,32,.5);border-radius:40px;padding:10px 24px;font-size:13px;font-weight:700;color:#FF9A45;margin-bottom:28px;">
+      🎪 5月3日（日）〜 5日（火）
+    </div>
+
+    <!-- カウントダウン -->
+    <div class="hero-countdown" id="countdown-c" style="margin-bottom:32px;">
+      <div class="countdown-block" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);">
+        <span class="countdown-num" id="cd-d-c" style="color:#fff;">-</span>
+        <span class="countdown-label" style="color:rgba(255,255,255,.4);">日</span>
+      </div>
+      <div class="countdown-block" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);">
+        <span class="countdown-num" id="cd-h-c" style="color:#fff;">-</span>
+        <span class="countdown-label" style="color:rgba(255,255,255,.4);">時間</span>
+      </div>
+      <div class="countdown-block" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);">
+        <span class="countdown-num" id="cd-m-c" style="color:#fff;">-</span>
+        <span class="countdown-label" style="color:rgba(255,255,255,.4);">分</span>
+      </div>
+      <div class="countdown-block" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);">
+        <span class="countdown-num" id="cd-s-c" style="color:#fff;">-</span>
+        <span class="countdown-label" style="color:rgba(255,255,255,.4);">秒</span>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <a href="#howto" class="btn btn--main" style="background:var(--orange);box-shadow:0 6px 28px rgba(240,112,32,.45);letter-spacing:.05em;">
+      🎫 チケットを申し込む
+    </a>
+
+  </div>
+</section>
+
 <!-- ========== HERO ========== -->
 <section id="hero">
 
@@ -1263,16 +1325,23 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
 (function () {
   const TEST_KEY = 'ab_hero_guide_v1';
 
-  // バリアント取得 or 新規割り当て（50/50）
+  // バリアント取得 or 新規割り当て（A/B/C 各33%）
   let variant = localStorage.getItem(TEST_KEY);
   if (!variant) {
-    variant = Math.random() < 0.5 ? 'A' : 'B';
+    const r = Math.random();
+    variant = r < 0.333 ? 'A' : r < 0.667 ? 'B' : 'C';
     localStorage.setItem(TEST_KEY, variant);
   }
 
-  // B案のみヒーローガイドを表示
+  // B案：ヒーロー直下にアプリDL手順バナーを表示
   if (variant === 'B') {
     document.getElementById('ab-hero-guide').style.display = 'block';
+  }
+
+  // C案：ダークヒーローを表示・家族向けヒーローを非表示
+  if (variant === 'C') {
+    document.getElementById('hero-c').style.display = 'block';
+    document.getElementById('hero').style.display = 'none';
   }
 
   // GA4へバリアント割り当てを送信
@@ -1307,38 +1376,51 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
   }, { passive: true });
 })();
 
-// --- カウントダウン ---
+// --- カウントダウン（A/B案・C案 共通）---
+function setCountdown(d, h, m, s, suffix) {
+  const sfx = suffix || '';
+  const el = {
+    d: document.getElementById('cd-d' + sfx),
+    h: document.getElementById('cd-h' + sfx),
+    m: document.getElementById('cd-m' + sfx),
+    s: document.getElementById('cd-s' + sfx),
+  };
+  if (el.d) el.d.textContent = String(d).padStart(2,'0');
+  if (el.h) el.h.textContent = String(h).padStart(2,'0');
+  if (el.m) el.m.textContent = String(m).padStart(2,'0');
+  if (el.s) el.s.textContent = String(s).padStart(2,'0');
+}
 function updateCountdown() {
   const deadline = new Date('2026-05-04T08:00:00+09:00');
   const now = new Date();
   const diff = deadline - now;
-
   if (diff <= 0) {
-    document.getElementById('countdown').innerHTML =
-      '<p style="font-weight:900;color:var(--red);">でかやまが始まりました！🎪</p>';
+    ['countdown','countdown-c'].forEach(function(id){
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = '<p style="font-weight:900;color:var(--red);">でかやまが始まりました！🎪</p>';
+    });
     return;
   }
-
   const d = Math.floor(diff / 86400000);
   const h = Math.floor((diff % 86400000) / 3600000);
   const m = Math.floor((diff % 3600000) / 60000);
   const s = Math.floor((diff % 60000) / 1000);
-
-  document.getElementById('cd-d').textContent = String(d).padStart(2,'0');
-  document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
-  document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
-  document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
+  setCountdown(d, h, m, s, '');    // A/B案
+  setCountdown(d, h, m, s, '-c');  // C案
 }
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-// --- スティッキーCTA ---
+// --- スティッキーCTA（C案は hero-c を監視）---
 const stickyCta = document.getElementById('sticky-cta');
-const hero = document.getElementById('hero');
+const currentVariant = localStorage.getItem('ab_hero_guide_v1');
+const heroTarget = currentVariant === 'C'
+  ? document.getElementById('hero-c')
+  : document.getElementById('hero');
 const observer = new IntersectionObserver(([e]) => {
   stickyCta.classList.toggle('visible', !e.isIntersecting);
 }, { threshold: 0 });
-observer.observe(hero);
+observer.observe(heroTarget);
 
 // --- FAQアコーディオン ---
 document.querySelectorAll('.faq-q').forEach(btn => {

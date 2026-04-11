@@ -773,6 +773,46 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
   .flow-list::before { left: 32px; }
   .flow-num { width: 48px; height: 48px; font-size: 20px; }
 }
+
+/* ===== VARIANT C: NAVY COLOR SYSTEM (#3E5070) ===== */
+body.variant-c {
+  --c-navy:        #3E5070;
+  --c-navy-dark:   #2C3F5E;
+  --c-navy-mid:    #556A8A;
+  --c-navy-bg:     #EEF1F7;
+  --c-navy-border: rgba(62,80,112,.18);
+}
+/* セクション背景 */
+body.variant-c .section--orange        { background: var(--c-navy-bg); }
+body.variant-c .section--sky           { background: #F4F6FA; }
+body.variant-c .section--orange-strong { background: linear-gradient(160deg, var(--c-navy) 0%, var(--c-navy-dark) 100%); }
+/* ラベル */
+body.variant-c .sec-label              { background: var(--c-navy); color: #fff; }
+body.variant-c .sec-label--white       { background: rgba(255,255,255,.15); color: #fff; }
+/* ボタン */
+body.variant-c .btn--sub               { color: var(--c-navy); border-color: var(--c-navy); }
+/* フロー番号 */
+body.variant-c .flow-num               { background: var(--c-navy); }
+/* 購入手順番号 */
+body.variant-c .howto-step .num        { background: var(--c-navy); color: #fff; }
+body.variant-c .howto-step             { border-left: 3px solid var(--c-navy-border); }
+/* プランカード */
+body.variant-c .plan-main              { border: 2px solid var(--c-navy); }
+body.variant-c .plan-main-header       { background: linear-gradient(135deg, var(--c-navy) 0%, var(--c-navy-dark) 100%); }
+body.variant-c .plan-includes .check   { color: var(--c-navy); }
+/* FAQ */
+body.variant-c .faq-q .q-icon         { background: var(--c-navy); }
+/* スケジュール */
+body.variant-c .schedule-slot         { background: var(--c-navy-bg); border-color: var(--c-navy); }
+body.variant-c .schedule-note         { background: var(--c-navy-bg); }
+/* グッズ */
+body.variant-c .goods-note            { background: var(--c-navy-bg); }
+/* スティッキーCTA */
+body.variant-c #sticky-cta            { border-top-color: var(--c-navy); }
+body.variant-c #sticky-cta .cta-text strong { color: var(--c-navy); }
+/* バッジ */
+body.variant-c .badge--sale           { background: var(--c-navy); }
+body.variant-c .badge--rare           { background: var(--c-navy-mid); }
 </style>
 </head>
 <body>
@@ -1344,10 +1384,11 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
     document.getElementById('ab-hero-guide').style.display = 'block';
   }
 
-  // C案：ダークヒーローを表示・家族向けヒーローを非表示
+  // C案：ダークヒーローを表示・家族向けヒーローを非表示・ナビー配色＋テキスト適用
   if (variant === 'C') {
     document.getElementById('hero-c').style.display = 'block';
     document.getElementById('hero').style.display = 'none';
+    applyVariantC();
   }
 
   // GA4へバリアント割り当てを送信
@@ -1381,6 +1422,78 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
     });
   }, { passive: true });
 })();
+
+// ============================================================
+// Variant C: テキスト・配色の一括適用
+// ============================================================
+function applyVariantC() {
+  document.body.classList.add('variant-c');
+
+  function setText(sel, text) {
+    var el = document.querySelector(sel);
+    if (el) el.textContent = text;
+  }
+  function setHTML(sel, html) {
+    var el = document.querySelector(sel);
+    if (el) el.innerHTML = html;
+  }
+  function hide(sel) {
+    document.querySelectorAll(sel).forEach(function(el) { el.style.display = 'none'; });
+  }
+
+  // ── SIZE ──────────────────────────────────────────
+  setText('#size .sec-label', 'でかやまの規模');
+  setText('#size .sec-title', '高さ12m。重さ20トン。');
+  setHTML('#size .size-compare p', 'その山車を、人の力だけで動かします。');
+
+  // ── PLANS ─────────────────────────────────────────
+  setText('#plans .sec-label', 'チケットプラン');
+  setText('#plans .sec-title', '3つの体験プラン');
+  setText('#plans .recommend', 'ベーシック');
+  // 正規価格に戻す（ファミリー割なし）
+  setText('#plans .price-row .price', '¥4,500');
+  hide('#plans .price-note');
+  // ファミリー注釈を非表示
+  hide('#plans .container > p');
+  // CTAの絵文字を除去
+  var planBtn = document.querySelector('#plans .btn--main');
+  if (planBtn) planBtn.textContent = 'このプランを申し込む';
+
+  // ── FAQ ───────────────────────────────────────────
+  setText('#safety .sec-label', 'よくある質問');
+  setText('#safety .sec-title', '参加前の確認');
+  // Q1 テキストノードを書き換え
+  var faqQ1 = document.querySelector('#safety .faq-item:first-child .faq-q');
+  if (faqQ1) {
+    Array.from(faqQ1.childNodes).forEach(function(node) {
+      if (node.nodeType === 3 && node.textContent.trim().length > 0) {
+        node.textContent = ' 初めてでも参加できますか？';
+      }
+    });
+  }
+  setHTML('#safety .faq-item:first-child .faq-a',
+    'はい。スタッフが当日の流れを丁寧に案内します。綱を引くだけなので、経験は不要です。');
+
+  // ── GOODS ─────────────────────────────────────────
+  setText('#goods .sec-label', '参加者限定グッズ');
+  setText('#goods .sec-title', '曳き手の証としてお持ち帰りできます。');
+  setHTML('#goods .sec-lead',
+    'チケットには手ぬぐいが1枚付属します。<br>当日会場での追加購入も可能です。');
+  setHTML('#goods .goods-note',
+    'チケットには手ぬぐい1枚が付属します。追加で購入される方は当日会場でお買い求めいただけます。');
+
+  // ── STICKY CTA ────────────────────────────────────
+  var stickyStrong = document.querySelector('#sticky-cta .cta-text strong');
+  if (stickyStrong) stickyStrong.textContent = 'でかやま開催まで';
+  var stickySmall = document.querySelector('#sticky-cta .cta-text');
+  if (stickySmall) {
+    Array.from(stickySmall.childNodes).forEach(function(node) {
+      if (node.nodeType === 3 && node.textContent.trim().length > 0) {
+        node.textContent = '\n曳き手プラン ¥4,500〜';
+      }
+    });
+  }
+}
 
 // --- カウントダウン（A/B案・C案 共通）---
 function setCountdown(d, h, m, s, suffix) {

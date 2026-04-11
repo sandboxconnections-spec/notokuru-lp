@@ -1441,10 +1441,8 @@ function applyVariantC() {
     document.querySelectorAll(sel).forEach(function(el) { el.style.display = 'none'; });
   }
 
-  // ── SIZE ──────────────────────────────────────────
-  setText('#size .sec-label', 'でかやまの規模');
-  setText('#size .sec-title', '高さ12m。重さ20トン。');
-  setHTML('#size .size-compare p', 'その山車を、人の力だけで動かします。');
+  // ── SIZE（C案では非表示）────────────────────────────
+  hide('#size');
 
   // ── PLANS ─────────────────────────────────────────
   setText('#plans .sec-label', 'チケットプラン');

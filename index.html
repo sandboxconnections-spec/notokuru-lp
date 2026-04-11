@@ -850,6 +850,45 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
   </div>
 </section>
 
+<!-- ========== AB TEST: HERO GUIDE（B案のみ表示） ========== -->
+<div id="ab-hero-guide" style="display:none;">
+  <div style="background:var(--sky);color:#fff;padding:28px 20px;">
+    <div style="max-width:var(--max);margin:0 auto;text-align:center;">
+      <p style="font-size:12px;font-weight:900;letter-spacing:.1em;opacity:.85;margin-bottom:16px;">📱 チケットのお申し込み方法</p>
+      <div style="display:flex;align-items:stretch;justify-content:center;gap:6px;margin-bottom:20px;">
+        <div style="background:rgba(255,255,255,.18);border-radius:12px;padding:14px 10px;flex:1;">
+          <div style="font-size:28px;margin-bottom:6px;">📱</div>
+          <div style="font-size:11px;font-weight:900;line-height:1.5;">① ほくさん！<br>アプリをDL</div>
+        </div>
+        <div style="display:flex;align-items:center;font-size:18px;opacity:.6;flex-shrink:0;">→</div>
+        <div style="background:rgba(255,255,255,.18);border-radius:12px;padding:14px 10px;flex:1;">
+          <div style="font-size:28px;margin-bottom:6px;">👤</div>
+          <div style="font-size:11px;font-weight:900;line-height:1.5;">② 会員登録<br>（無料）</div>
+        </div>
+        <div style="display:flex;align-items:center;font-size:18px;opacity:.6;flex-shrink:0;">→</div>
+        <div style="background:rgba(255,255,255,.18);border-radius:12px;padding:14px 10px;flex:1;">
+          <div style="font-size:28px;margin-bottom:6px;">🎫</div>
+          <div style="font-size:11px;font-weight:900;line-height:1.5;">③ チケット<br>購入完了</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:380px;margin:0 auto;">
+        <a href="https://apps.apple.com/jp/app/%E3%81%BB%E3%81%8F%E3%81%95%E3%82%93/id6745260910"
+           style="display:flex;align-items:center;justify-content:center;gap:6px;background:rgba(255,255,255,.95);color:var(--sky);border-radius:50px;padding:13px 16px;font-size:13px;font-weight:900;text-decoration:none;"
+           target="_blank" rel="noopener"
+           data-track="app_store_click" data-location="hero_guide">
+          🍎 iPhone
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=tokyo.eventos.hokusan&utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+           style="display:flex;align-items:center;justify-content:center;gap:6px;background:rgba(255,255,255,.95);color:var(--sky);border-radius:50px;padding:13px 16px;font-size:13px;font-weight:900;text-decoration:none;"
+           target="_blank" rel="noopener"
+           data-track="play_store_click" data-location="hero_guide">
+          🤖 Android
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ========== SIZE ========== -->
 <section class="section section--orange" id="size">
   <div class="container">
@@ -1182,10 +1221,12 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
       <div style="border:2px solid var(--orange);border-radius:var(--radius);padding:16px;margin-bottom:16px;">
         <p style="font-size:13px;font-weight:900;color:var(--orange);margin-bottom:10px;">① アプリで購入（推奨・すぐ決済）</p>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-          <a href="https://apps.apple.com/jp/app/%E3%81%BB%E3%81%8F%E3%81%95%E3%82%93/id6745260910" class="btn btn--sub" style="font-size:13px;padding:12px 16px;" target="_blank" rel="noopener">
+          <a href="https://apps.apple.com/jp/app/%E3%81%BB%E3%81%8F%E3%81%95%E3%82%93/id6745260910" class="btn btn--sub" style="font-size:13px;padding:12px 16px;" target="_blank" rel="noopener"
+             data-track="app_store_click" data-location="howto">
             🍎 iPhone (App Store)
           </a>
-          <a href="https://play.google.com/store/apps/details?id=tokyo.eventos.hokusan&utm_source=ig&utm_medium=social&utm_content=link_in_bio" class="btn btn--sub" style="font-size:13px;padding:12px 16px;" target="_blank" rel="noopener">
+          <a href="https://play.google.com/store/apps/details?id=tokyo.eventos.hokusan&utm_source=ig&utm_medium=social&utm_content=link_in_bio" class="btn btn--sub" style="font-size:13px;padding:12px 16px;" target="_blank" rel="noopener"
+             data-track="play_store_click" data-location="howto">
             🤖 Android (Google Play)
           </a>
         </div>
@@ -1215,6 +1256,57 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
 
 <!-- ========== JS ========== -->
 <script>
+// ============================================================
+// A/B TEST: hero_guide_v1
+// A案 = 現行LP / B案 = ヒーロー直下にアプリDL手順バナー表示
+// ============================================================
+(function () {
+  const TEST_KEY = 'ab_hero_guide_v1';
+
+  // バリアント取得 or 新規割り当て（50/50）
+  let variant = localStorage.getItem(TEST_KEY);
+  if (!variant) {
+    variant = Math.random() < 0.5 ? 'A' : 'B';
+    localStorage.setItem(TEST_KEY, variant);
+  }
+
+  // B案のみヒーローガイドを表示
+  if (variant === 'B') {
+    document.getElementById('ab-hero-guide').style.display = 'block';
+  }
+
+  // GA4へバリアント割り当てを送信
+  window.addEventListener('load', function () {
+    gtag('event', 'ab_assigned', {
+      test_name: 'hero_guide_v1',
+      variant: variant
+    });
+  });
+
+  // 全CTAクリックをバリアント付きで計測
+  document.querySelectorAll('[data-track]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      gtag('event', el.dataset.track, {
+        variant: variant,
+        location: el.dataset.location || 'unknown'
+      });
+    });
+  });
+
+  // スクロール深度をバリアント付きで計測（25/50/75/100%）
+  var depths = [25, 50, 75, 100];
+  var tracked = {};
+  window.addEventListener('scroll', function () {
+    var pct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+    depths.forEach(function (d) {
+      if (pct >= d && !tracked[d]) {
+        tracked[d] = true;
+        gtag('event', 'scroll_depth', { variant: variant, depth: d });
+      }
+    });
+  }, { passive: true });
+})();
+
 // --- カウントダウン ---
 function updateCountdown() {
   const deadline = new Date('2026-05-04T08:00:00+09:00');

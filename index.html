@@ -1374,7 +1374,7 @@ body.variant-c .badge--rare           { background: var(--c-navy-mid); }
     variant = localStorage.getItem(TEST_KEY);
     if (!variant) {
       const r = Math.random();
-      variant = r < 0.333 ? 'A' : r < 0.667 ? 'B' : 'C';
+      variant = r < 0.25 ? 'A' : r < 0.50 ? 'B' : 'C'; // A:25% B:25% C:50%
       localStorage.setItem(TEST_KEY, variant);
     }
   }

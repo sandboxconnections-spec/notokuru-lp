@@ -793,10 +793,16 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
 <!-- ========== HERO C案（一般向け・ダーク） ========== -->
 <section id="hero-c" style="display:none;background:#0D0D0D;color:#fff;padding:0 0 52px;overflow:hidden;">
 
-  <!-- 動画プレースホルダー（後で差し替え） -->
-  <div style="width:100%;aspect-ratio:9/16;max-height:90vh;background:#161616;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border-bottom:1px solid #222;">
-    <div style="font-size:52px;opacity:.25;">🎬</div>
-    <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.2);letter-spacing:.1em;">VIDEO PLACEHOLDER</div>
+  <!-- 動画（LP用ショート） -->
+  <div class="hero-illust">
+    <video
+      src="LP用ショート.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="dekayama.jpg"
+    ></video>
   </div>
 
   <div style="padding:40px 20px 0;text-align:center;max-width:720px;margin:0 auto;">
@@ -1325,12 +1331,20 @@ footer a { color: rgba(255,255,255,.6); text-decoration: underline; }
 (function () {
   const TEST_KEY = 'ab_hero_guide_v1';
 
-  // バリアント取得 or 新規割り当て（A/B/C 各33%）
-  let variant = localStorage.getItem(TEST_KEY);
-  if (!variant) {
-    const r = Math.random();
-    variant = r < 0.333 ? 'A' : r < 0.667 ? 'B' : 'C';
+  // URLパラメータ ?ab=A / ?ab=B / ?ab=C で強制切り替え（確認用）
+  const urlVariant = new URLSearchParams(location.search).get('ab');
+  let variant;
+  if (urlVariant && ['A','B','C'].includes(urlVariant.toUpperCase())) {
+    variant = urlVariant.toUpperCase();
     localStorage.setItem(TEST_KEY, variant);
+  } else {
+    // 通常：localStorage から取得 or 新規割り当て（A/B/C 各33%）
+    variant = localStorage.getItem(TEST_KEY);
+    if (!variant) {
+      const r = Math.random();
+      variant = r < 0.333 ? 'A' : r < 0.667 ? 'B' : 'C';
+      localStorage.setItem(TEST_KEY, variant);
+    }
   }
 
   // B案：ヒーロー直下にアプリDL手順バナーを表示

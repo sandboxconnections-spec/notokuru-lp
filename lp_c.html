@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>のとくる？｜青柏祭2026 チケット</title>
+<meta name="description" content="ユネスコ無形文化遺産・青柏祭を地元の人と一緒に体験。高さ12m・重さ20トンのでかやまを間近で感じる特別プラン。2026年5月3日〜5日開催。">
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HHH5110L4Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HHH5110L4Y');
+  gtag('event', 'ab_assigned', { test_name: 'hero_guide_v1', variant: 'C' });
+</script>
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+<style>
+/* ===== RESET ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --blue:      #1632A1;
+  --blue-lt:   #2644C8;
+  --blue-dark: #0A0097;
+  --red:       #D54A46;
+  --text:      #333333;
+  --text-sub:  #666666;
+  --white:     #ffffff;
+  --cream:     #f8f6f2;
+  --border:    #e4e0d8;
+}
+
+body {
+  font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* ===== FLOATING MENU ===== */
+.menu-btn {
+  position: fixed; top: 16px; right: 16px; z-index: 1000;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--red); border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(213,74,70,0.4);
+  transition: transform .2s;
+}
+.menu-btn:active { transform: scale(0.95); }
+.menu-btn .material-icons-outlined { color: #fff; font-size: 26px; }
+
+/* ===== NAV OVERLAY ===== */
+.nav-overlay {
+  position: fixed; inset: 0; z-index: 999;
+  background: rgba(22,50,161,0.97);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.3s;
+}
+.nav-overlay.active { opacity: 1; pointer-events: auto; }
+.nav-close {
+  position: absolute; top: 16px; right: 16px;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--red); border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.nav-close .material-icons-outlined { color: #fff; font-size: 26px; }
+.nav-list { list-style: none; text-align: center; }
+.nav-list li { margin: 16px 0; }
+.nav-list a {
+  color: rgba(255,255,255,0.85);
+  font-family: 'Marcellus', serif;
+  font-size: 20px; letter-spacing: 0.15em;
+  transition: color .2s;
+}
+.nav-list a:hover { color: #fff; }
+
+/* ===== HERO ===== */
+.hero {
+  position: relative; width: 100%;
+  height: 100svh; min-height: 500px;
+  overflow: hidden;
+}
+.hero__img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+}
+.hero__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.35) 100%);
+}
+.hero__logo {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(64px, 22vw, 130px);
+  font-weight: 900;
+  color: rgba(255,255,255,0.92);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-shadow: 2px 4px 0 rgba(0,0,0,.2);
+  white-space: nowrap;
+  text-align: center;
+}
+.hero__banner {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: var(--red);
+  color: #fff; text-align: center;
+  padding: 14px 20px;
+  font-size: 15px; font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* ===== SECTION COMMON ===== */
+.section { padding: 72px 20px; }
+.section--cream { background: var(--cream); }
+.section--blue  { background: var(--blue); color: #fff; }
+
+.eyebrow {
+  display: block;
+  font-family: 'Marcellus', serif;
+  font-size: 12px; letter-spacing: 0.4em;
+  color: var(--blue); text-align: center;
+  margin-bottom: 8px;
+}
+.eyebrow--white { color: rgba(255,255,255,0.55); }
+
+.sec-title {
+  font-size: clamp(22px, 6vw, 30px);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+.sec-title--white { color: #fff; }
+
+.sec-lead {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-sub);
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+.sec-lead--white { color: rgba(255,255,255,0.7); }
+
+.inner { max-width: 480px; margin: 0 auto; }
+
+/* ===== CONCEPT ===== */
+.concept__poem {
+  font-size: 16px; line-height: 2.8;
+  color: var(--text);
+  margin-bottom: 48px;
+}
+.concept__photo {
+  width: 100%; height: 260px;
+  object-fit: cover;
+}
+
+/* ===== FEATURE ===== */
+.feature-item { margin-bottom: 52px; }
+.feature-item:last-child { margin-bottom: 0; }
+.feature-item__img {
+  width: 100%; height: 220px;
+  object-fit: cover; border-radius: 4px;
+  margin-bottom: 20px;
+}
+.feature-item__label {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 19px; font-weight: 700;
+  margin-bottom: 12px; color: var(--text);
+  line-height: 1.4;
+}
+.feature-item__label::before {
+  content: '✦';
+  color: var(--red); font-size: 13px;
+  flex-shrink: 0;
+}
+.feature-item__text {
+  font-size: 15px; line-height: 1.9;
+  color: var(--text-sub);
+}
+
+/* ===== FLOW ===== */
+.flow-steps { margin-top: 8px; }
+.flow-step {
+  display: flex; gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+.flow-step:last-child { margin-bottom: 0; }
+.flow-step__icon {
+  flex-shrink: 0;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.25);
+  display: flex; align-items: center; justify-content: center;
+}
+.flow-step__icon .material-icons-outlined { font-size: 24px; color: #fff; }
+.flow-step__icon--gold {
+  background: rgba(255,220,80,0.2);
+  border-color: rgba(255,220,80,0.4);
+}
+.flow-step__icon--gold .material-icons-outlined { color: #FFE066; }
+.flow-step__body { flex: 1; padding-top: 10px; }
+.flow-step__title {
+  font-size: 17px; font-weight: 700;
+  color: #fff; line-height: 1.4; margin-bottom: 4px;
+}
+.flow-step__desc {
+  font-size: 13px; line-height: 1.7;
+  color: rgba(255,255,255,0.72);
+}
+.flow-step__tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.9);
+  font-size: 11px; font-weight: 700;
+  padding: 2px 10px; border-radius: 4px;
+  margin-top: 6px; letter-spacing: 0.05em;
+}
+
+/* ===== CTA BUTTONS ===== */
+.cta-btn {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; width: 100%; padding: 16px;
+  background: var(--red); color: #fff;
+  font-size: 16px; font-weight: 700;
+  letter-spacing: 0.08em; border-radius: 4px;
+  border: none; cursor: pointer;
+  transition: background .2s;
+}
+.cta-btn:hover { background: #bf3c38; }
+.cta-btn .material-icons-outlined { font-size: 20px; }
+
+.cta-sub {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; width: 100%; padding: 14px;
+  background: transparent;
+  color: var(--blue); font-size: 14px; font-weight: 600;
+  border: 2px solid var(--blue); border-radius: 4px;
+  margin-top: 12px;
+}
+
+/* ===== PRICE ===== */
+.price-list { margin-bottom: 24px; }
+.price-item {
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+.price-item:first-child { border-top: 1px solid var(--border); }
+.price-item--highlight {
+  background: #eef1fa;
+  margin: 0 -20px; padding: 18px 20px;
+  border-bottom: 1px solid #cdd4f0;
+}
+.price-item--highlight:first-child { border-top: 1px solid #cdd4f0; }
+.price-item__left { flex: 1; }
+.price-item__name { font-size: 16px; font-weight: 700; margin-bottom: 2px; }
+.price-item__sub { font-size: 12px; color: var(--text-sub); line-height: 1.5; }
+.price-item__right { text-align: right; flex-shrink: 0; }
+.price-item__price {
+  font-size: 22px; font-weight: 900;
+  color: var(--blue); white-space: nowrap;
+}
+.price-item__price small { font-size: 12px; font-weight: 400; color: var(--text-sub); }
+.price-item__original { font-size: 11px; color: var(--text-sub); }
+.price-item__original s { color: #999; }
+.price-note {
+  font-size: 12px; color: var(--text-sub);
+  line-height: 1.8; margin-top: 16px;
+}
+
+/* ===== FAQ ===== */
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-q {
+  width: 100%; background: none; border: none; cursor: pointer;
+  display: flex; align-items: center; gap: 12px;
+  padding: 20px 0; text-align: left; font-family: inherit;
+}
+.faq-q__icon {
+  flex-shrink: 0; width: 34px; height: 34px;
+  border-radius: 50%; background: var(--blue);
+  color: #fff; font-size: 14px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+}
+.faq-q__text { flex: 1; font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.5; }
+.faq-q__arrow { color: var(--blue); transition: transform 0.3s; font-size: 22px; }
+.faq-item.open .faq-q__arrow { transform: rotate(180deg); }
+.faq-a-wrap { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.32s; }
+.faq-item.open .faq-a-wrap { grid-template-rows: 1fr; }
+.faq-a { overflow: hidden; min-height: 0; }
+.faq-a__inner {
+  display: flex; gap: 12px;
+  padding: 0 0 20px 46px; align-items: flex-start;
+}
+.faq-a__icon {
+  flex-shrink: 0; width: 34px; height: 34px;
+  border-radius: 50%; border: 2px solid var(--blue);
+  color: var(--blue); font-size: 14px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+}
+.faq-a__text { font-size: 14px; color: var(--text-sub); line-height: 1.9; padding-top: 4px; }
+
+/* ===== ACCESS ===== */
+.access-map {
+  width: 100%; height: 220px;
+  border-radius: 8px; overflow: hidden;
+  margin-bottom: 28px;
+}
+.access-map iframe { width: 100%; height: 100%; border: 0; }
+.access-item { padding: 16px 0; border-bottom: 1px solid var(--border); }
+.access-item:first-child { border-top: 1px solid var(--border); }
+.access-item__label {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 700; margin-bottom: 4px;
+}
+.access-item__label .material-icons-outlined { font-size: 18px; color: var(--blue); }
+.access-item__text { font-size: 13px; color: var(--text-sub); line-height: 1.7; padding-left: 26px; }
+
+/* ===== FINAL CTA ===== */
+.final-cta {
+  background: linear-gradient(180deg, var(--blue-dark) 0%, var(--blue) 100%);
+  padding: 60px 20px; text-align: center;
+}
+.final-cta__title {
+  font-size: 20px; font-weight: 700;
+  color: #fff; line-height: 1.6; margin-bottom: 8px;
+}
+.final-cta__sub {
+  font-size: 13px; color: rgba(255,255,255,0.6);
+  margin-bottom: 28px; line-height: 1.8;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #111; color: rgba(255,255,255,0.35);
+  text-align: center; padding: 28px 20px;
+  font-size: 12px; line-height: 1.8;
+}
+
+/* ===== FIXED BOTTOM BAR ===== */
+.bottom-bar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  z-index: 998; display: flex;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.1);
+  border-top: 1px solid var(--border);
+}
+.bottom-bar__left {
+  background: #fff; flex: 0 0 auto;
+  display: flex; align-items: center; gap: 4px;
+  padding: 10px 14px;
+  font-size: 11px; font-weight: 600; color: var(--text-sub);
+  border-right: 1px solid var(--border);
+}
+.bottom-bar__left .material-icons-outlined { font-size: 18px; color: var(--blue); }
+.bottom-bar__right {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  background: var(--red); color: #fff;
+  font-size: 15px; font-weight: 700;
+  letter-spacing: 0.08em; gap: 6px; padding: 12px;
+}
+.bottom-bar__right .material-icons-outlined { font-size: 18px; }
+.bottom-spacer { height: 56px; }
+
+/* ===== SCROLL ANIM ===== */
+.appear { opacity: 0; transform: translateY(20px); transition: opacity 0.55s, transform 0.55s; }
+.appear.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- ===== MENU BUTTON ===== -->
+<button class="menu-btn" id="menuBtn" aria-label="メニュー">
+  <span class="material-icons-outlined">menu</span>
+</button>
+
+<!-- ===== NAV OVERLAY ===== -->
+<nav class="nav-overlay" id="navOverlay">
+  <button class="nav-close" id="navClose" aria-label="閉じる">
+    <span class="material-icons-outlined">close</span>
+  </button>
+  <ul class="nav-list">
+    <li><a href="#concept" class="nav-link">CONCEPT</a></li>
+    <li><a href="#feature" class="nav-link">FEATURE</a></li>
+    <li><a href="#flow"    class="nav-link">FLOW</a></li>
+    <li><a href="#price"   class="nav-link">PRICE</a></li>
+    <li><a href="#faq"     class="nav-link">FAQ</a></li>
+    <li><a href="#access"  class="nav-link">ACCESS</a></li>
+  </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <img class="hero__img" src="dekayama.jpg" alt="でかやま">
+  <div class="hero__overlay"></div>
+  <div class="hero__logo">のとくる？</div>
+  <div class="hero__banner">青柏祭2026　チケット受付中　5月3日〜5日</div>
+</section>
+
+<!-- ===== CONCEPT ===== -->
+<section class="section" id="concept">
+  <div class="inner">
+    <span class="eyebrow">CONCEPT</span>
+    <h2 class="sec-title">YOBARE</h2>
+    <p class="sec-lead">能登ってね、</p>
+    <div class="concept__poem appear">
+      <p>ふと呼ばれて</p>
+      <p>思いもよらない出来事をした。</p>
+      <p>こんな楽しい場所があったなんて。</p>
+      <p>きっとまだまだ見たことのないものがあるのだろう。</p>
+      <p>呼ばれてよかった。</p>
+      <p>次は僕が呼んでみようかな。</p>
+      <p>呼ぼう、この場所に。</p>
+    </div>
+  </div>
+  <img class="concept__photo appear" src="dekayama.jpg" alt="でかやま夜景">
+</section>
+
+<!-- ===== FEATURE ===== -->
+<section class="section section--cream" id="feature">
+  <div class="inner">
+    <span class="eyebrow">FEATURE</span>
+    <h2 class="sec-title">能登だからできること</h2>
+
+    <div class="feature-item appear">
+      <img class="feature-item__img" src="dekayama.jpg" alt="青柏祭でかやま">
+      <div class="feature-item__label">世界に誇る無形文化遺産</div>
+      <p class="feature-item__text">ユネスコ無形文化遺産に登録された「青柏祭」。高さ12m・重さ20トンの巨大山車「でかやま」が七尾の街を練り歩く、450年以上続く祭りです。日本が誇る祭り文化を、ここで体感してください。</p>
+    </div>
+
+    <div class="feature-item appear">
+      <img class="feature-item__img" src="dekayama.jpg" alt="でかやまの迫力">
+      <div class="feature-item__label">間近で感じるでかやまの迫力</div>
+      <p class="feature-item__text">4階建てビルに相当する高さ、アフリカゾウ3頭分の重さ。目の前に現れるでかやまのスケールは、写真や映像では伝わらない。専属ガイドと一緒に、その迫力を全身で感じてください。</p>
+    </div>
+
+    <div class="feature-item appear">
+      <img class="feature-item__img" src="でかやまのイラスト.png" alt="でかやまのイラスト" style="object-fit:contain;background:#f0ece4;">
+      <div class="feature-item__label">みんなで曳く祭り</div>
+      <p class="feature-item__text">地元の人も、観光客も、子どもも。誰でも綱を持って、一緒に曳くことができる。力を合わせ、声を合わせて動かす20トン。ここでしか味わえない一体感がここにあります。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FLOW ===== -->
+<section class="section section--blue" id="flow">
+  <div class="inner">
+    <span class="eyebrow eyebrow--white">FLOW</span>
+    <h2 class="sec-title sec-title--white">当日の流れ</h2>
+    <p class="sec-lead sec-lead--white">約1〜1.5時間のプログラム。<br>はじめての方も安心のサポート体制です。</p>
+
+    <div class="flow-steps">
+      <div class="flow-step appear">
+        <div class="flow-step__icon"><span class="material-icons-outlined">confirmation_number</span></div>
+        <div class="flow-step__body">
+          <div class="flow-step__title">ご予約</div>
+          <div class="flow-step__desc">当サイトまたはほくさん！アプリより事前予約をお願いします。当日券の販売はありません。</div>
+        </div>
+      </div>
+
+      <div class="flow-step appear">
+        <div class="flow-step__icon"><span class="material-icons-outlined">directions_bus</span></div>
+        <div class="flow-step__body">
+          <div class="flow-step__title">ご来場：一本杉ガーデン</div>
+          <div class="flow-step__desc">JR七尾駅より徒歩5分。集合場所は一本杉通り沿いの「一本杉ガーデン」です。</div>
+        </div>
+      </div>
+
+      <div class="flow-step appear">
+        <div class="flow-step__icon"><span class="material-icons-outlined">how_to_reg</span></div>
+        <div class="flow-step__body">
+          <div class="flow-step__title">受付・集合</div>
+          <div class="flow-step__desc">スタッフがお出迎え。チケットを確認し、手ぬぐいをお渡しします。</div>
+        </div>
+      </div>
+
+      <div class="flow-step appear">
+        <div class="flow-step__icon"><span class="material-icons-outlined">menu_book</span></div>
+        <div class="flow-step__body">
+          <div class="flow-step__title">青柏祭レクチャー</div>
+          <div class="flow-step__desc">地元ガイドが青柏祭の歴史や文化、でかやまの見どころを解説。知ってから見る祭りは、感動が違います。</div>
+          <span class="flow-step__tag">ここだけの話が聞ける</span>
+        </div>
+      </div>
+
+      <div class="flow-step appear">
+        <div class="flow-step__icon"><span class="material-icons-outlined">directions_walk</span></div>
+        <div class="flow-step__body">
+          <div class="flow-step__title">いざ、でかやまの近くへ！</div>
+          <div class="flow-step__desc">高さ12m・重さ20トンのでかやまの迫力を、間近で全身で感じてください。</div>
+        </div>
+      </div>
+
+      <div class="flow-step appear">
+        <div class="flow-step__icon flow-step__icon--gold"><span class="material-icons-outlined">fitness_center</span></div>
+        <div class="flow-step__body">
+          <div class="flow-step__title">でかやまを曳く！</div>
+          <div class="flow-step__desc">希望者は地元の人と一緒にでかやまを曳くことができます。声を合わせて、全力で！一生の思い出になります。</div>
+          <span class="flow-step__tag">自由参加・希望者のみ</span>
+        </div>
+      </div>
+
+      <div class="flow-step appear">
+        <div class="flow-step__icon"><span class="material-icons-outlined">photo_camera</span></div>
+        <div class="flow-step__body">
+          <div class="flow-step__title">でかやまをバックに記念写真を撮る！</div>
+          <div class="flow-step__desc">「ここにいた」という思い出を形に残してください。</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:40px;">
+      <a href="https://seihakusai2026.peatix.com/" class="cta-btn" target="_blank" rel="noopener" data-track="flow_cta_click" data-location="flow_c">
+        <span class="material-icons-outlined">confirmation_number</span>
+        ご予約はこちら
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICE ===== -->
+<section class="section" id="price">
+  <div class="inner">
+    <span class="eyebrow">PRICE</span>
+    <h2 class="sec-title">料金プラン</h2>
+    <p class="sec-lead">目的に合わせて選べるプランをご用意。<br>全プランにガイド・手ぬぐい付き。</p>
+
+    <div class="price-list appear">
+      <div class="price-item price-item--highlight">
+        <div class="price-item__left">
+          <div class="price-item__name">ファミリー/ペアプラン</div>
+          <div class="price-item__sub">2名以上でのお申し込みで10%OFF</div>
+        </div>
+        <div class="price-item__right">
+          <div class="price-item__price">¥4,050<small> /人</small></div>
+          <div class="price-item__original"><s>¥4,500</s> 10%OFF</div>
+        </div>
+      </div>
+      <div class="price-item">
+        <div class="price-item__left">
+          <div class="price-item__name">スタンダードプラン</div>
+          <div class="price-item__sub">ガイド・でかやまを間近で感じる・手ぬぐい</div>
+        </div>
+        <div class="price-item__right">
+          <div class="price-item__price">¥4,500<small> /人</small></div>
+        </div>
+      </div>
+      <div class="price-item">
+        <div class="price-item__left">
+          <div class="price-item__name">路地裏プラン</div>
+          <div class="price-item__sub">完成したての「でかやま」を間近に感じる特別プラン</div>
+        </div>
+        <div class="price-item__right">
+          <div class="price-item__price">¥6,700<small> /人</small></div>
+        </div>
+      </div>
+      <div class="price-item">
+        <div class="price-item__left">
+          <div class="price-item__name">プレミアムYOBAREプラン</div>
+          <div class="price-item__sub">よばれ（地元食事）・特別ガイドツアー付き</div>
+        </div>
+        <div class="price-item__right">
+          <div class="price-item__price">¥13,500<small> /人</small></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="price-note">
+      ※チケット料金には、ガイド費用と限定グッズ（手ぬぐい）費用が含まれます。<br>
+      ※当日券の販売はございません。事前予約が必要です。
+    </p>
+
+    <div style="margin-top:32px;">
+      <a href="https://seihakusai2026.peatix.com/" class="cta-btn" target="_blank" rel="noopener" data-track="price_cta_click" data-location="price_c">
+        <span class="material-icons-outlined">confirmation_number</span>
+        ご予約はこちら（Peatix）
+      </a>
+      <a href="https://apps.apple.com/jp/app/%E3%81%BB%E3%81%8F%E3%81%95%E3%82%93/id6745260910" class="cta-sub" target="_blank" rel="noopener" data-track="app_store_click" data-location="price_c">
+        📱 ほくさん！アプリからも予約できます
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section section--cream" id="faq">
+  <div class="inner">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="sec-title">よくあるご質問</h2>
+
+    <div class="faq-item open">
+      <button class="faq-q" aria-expanded="true">
+        <span class="faq-q__icon">Q</span>
+        <span class="faq-q__text">子どもも参加できますか？</span>
+        <span class="material-icons-outlined faq-q__arrow">expand_more</span>
+      </button>
+      <div class="faq-a-wrap"><div class="faq-a"><div class="faq-a__inner">
+        <span class="faq-a__icon">A</span>
+        <p class="faq-a__text">はい、小さなお子さんも保護者の方と一緒であれば参加できます。綱を引っ張るだけなので難しいことはありません。みんなで声を合わせて引っ張るのが醍醐味です！</p>
+      </div></div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">
+        <span class="faq-q__icon">Q</span>
+        <span class="faq-q__text">危なくないですか？</span>
+        <span class="material-icons-outlined faq-q__arrow">expand_more</span>
+      </button>
+      <div class="faq-a-wrap"><div class="faq-a"><div class="faq-a__inner">
+        <span class="faq-a__icon">A</span>
+        <p class="faq-a__text">当日はスタッフが常に安全を確認しながら進行します。小さなお子さんや初めての方でも安心してご参加いただけます。</p>
+      </div></div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">
+        <span class="faq-q__icon">Q</span>
+        <span class="faq-q__text">なにを着ていけばいいですか？</span>
+        <span class="material-icons-outlined faq-q__arrow">expand_more</span>
+      </button>
+      <div class="faq-a-wrap"><div class="faq-a"><div class="faq-a__inner">
+        <span class="faq-a__icon">A</span>
+        <p class="faq-a__text">動きやすい服装であれば何でもOKです。チケットに付属の手ぬぐいを首に巻いて参加してください。ヒールやサンダルは避け、必ず運動靴でお越しください。5月初旬の七尾は昼間は暖かいですが、朝夕は少し肌寒いこともあります。</p>
+      </div></div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">
+        <span class="faq-q__icon">Q</span>
+        <span class="faq-q__text">雨天はどうなりますか？</span>
+        <span class="material-icons-outlined faq-q__arrow">expand_more</span>
+      </button>
+      <div class="faq-a-wrap"><div class="faq-a"><div class="faq-a__inner">
+        <span class="faq-a__icon">A</span>
+        <p class="faq-a__text">青柏祭は小雨決行です。大雨・荒天の場合は主催側の判断で変更となる場合があります。詳細はほくさん！アプリでご確認ください。</p>
+      </div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACCESS ===== -->
+<section class="section" id="access">
+  <div class="inner">
+    <span class="eyebrow">ACCESS</span>
+    <h2 class="sec-title">アクセス</h2>
+    <p class="sec-lead">集合場所：一本杉ガーデン<br>石川県七尾市一本杉町17</p>
+
+    <div class="access-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1595.3!2d136.9665!3d37.0435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff7806b3bfea5e3%3A0x4d5f3c2c8c8a0e0!2z5LiA5pys5p2J6YCa44KK!5e0!3m2!1sja!2sjp!4v1" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="access-item">
+      <div class="access-item__label"><span class="material-icons-outlined">train</span>電車でお越しの方</div>
+      <div class="access-item__text">JR七尾駅より徒歩5分</div>
+    </div>
+    <div class="access-item">
+      <div class="access-item__label"><span class="material-icons-outlined">directions_bus</span>バスでお越しの方</div>
+      <div class="access-item__text">JR七尾駅バスターミナルより徒歩5分</div>
+    </div>
+    <div class="access-item">
+      <div class="access-item__label"><span class="material-icons-outlined">directions_car</span>お車でお越しの方</div>
+      <div class="access-item__text">能登食祭市場もしくはJR七尾駅周辺駐車場が会場より近くおすすめです。当日は混雑が予想されますので、お早めにお越しください。</div>
+    </div>
+
+    <p style="text-align:center;margin-top:20px;font-size:12px;color:var(--text-sub);">開催日：2026年5月3日（日）〜5月5日（火・祝）</p>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta">
+  <div class="inner">
+    <p class="final-cta__title">このGW、能登で特別な時間を。</p>
+    <p class="final-cta__sub">事前予約制・当日券の販売はありません。<br>ご予約はお早めに。</p>
+    <a href="https://seihakusai2026.peatix.com/" class="cta-btn" target="_blank" rel="noopener"
+       style="font-size:17px;padding:18px;"
+       data-track="final_cta_click" data-location="final_c">
+      <span class="material-icons-outlined">confirmation_number</span>
+      チケットを予約する
+    </a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p>主催：YOBARE ／ 石川県七尾市 ／ 青柏祭2026</p>
+  <p style="margin-top:4px;">© 2026 SandBoxConnections LLC. All rights reserved.</p>
+</footer>
+
+<div class="bottom-spacer"></div>
+
+<!-- ===== BOTTOM BAR ===== -->
+<div class="bottom-bar">
+  <a href="https://apps.apple.com/jp/app/%E3%81%BB%E3%81%8F%E3%81%95%E3%82%93/id6745260910"
+     class="bottom-bar__left" target="_blank" rel="noopener"
+     data-track="app_store_click" data-location="bottom_bar_c">
+    <span class="material-icons-outlined">smartphone</span>
+    アプリDL
+  </a>
+  <a href="https://seihakusai2026.peatix.com/"
+     class="bottom-bar__right" target="_blank" rel="noopener"
+     data-track="bottom_bar_click" data-location="bottom_bar_c">
+    <span class="material-icons-outlined">confirmation_number</span>
+    チケットを予約する
+  </a>
+</div>
+
+<!-- ===== JS ===== -->
+<script>
+// Menu
+const menuBtn = document.getElementById('menuBtn');
+const nav = document.getElementById('navOverlay');
+const navClose = document.getElementById('navClose');
+menuBtn.addEventListener('click', () => { nav.classList.add('active'); document.body.style.overflow = 'hidden'; });
+navClose.addEventListener('click', () => { nav.classList.remove('active'); document.body.style.overflow = ''; });
+document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => { nav.classList.remove('active'); document.body.style.overflow = ''; }));
+
+// FAQ
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+// Scroll animations
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.appear').forEach(el => obs.observe(el));
+
+// GA4 tracking
+document.querySelectorAll('[data-track]').forEach(el => {
+  el.addEventListener('click', () => {
+    gtag('event', el.dataset.track, { variant: 'C', location: el.dataset.location || 'unknown' });
+  });
+});
+
+// Scroll depth
+const depths = [25, 50, 75, 100];
+const tracked = {};
+window.addEventListener('scroll', () => {
+  const pct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+  depths.forEach(d => {
+    if (pct >= d && !tracked[d]) {
+      tracked[d] = true;
+      gtag('event', 'scroll_depth', { variant: 'C', depth: d });
+    }
+  });
+}, { passive: true });
+</script>
+
+</body>
+</html>

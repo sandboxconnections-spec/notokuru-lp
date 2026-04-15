@@ -16,10 +16,11 @@
   } else if (urlParam && ['A','B','C'].includes(variant)) {
     localStorage.setItem(TEST_KEY, variant);
   }
-  if (variant === 'B') {
-    // ページを隠してB案をfetch → document.write で差し替え（URLそのまま）
+  if (variant === 'B' || variant === 'C') {
+    // ページを隠してB/C案をfetch → document.write で差し替え（URLそのまま）
+    var lpFile = variant === 'B' ? './lp_b.html' : './lp_c.html';
     document.documentElement.style.visibility = 'hidden';
-    fetch('./lp_b.html')
+    fetch(lpFile)
       .then(function(res){ return res.text(); })
       .then(function(html){
         document.open();

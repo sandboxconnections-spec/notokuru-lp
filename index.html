@@ -11,7 +11,7 @@
   var variant = urlParam ? urlParam.toUpperCase() : localStorage.getItem(TEST_KEY);
   if (!variant) {
     var r = Math.random();
-    variant = r < 0.25 ? 'A' : r < 0.50 ? 'B' : 'C';
+    variant = r < 0.33 ? 'A' : r < 0.67 ? 'B' : 'C'; // A:33% B:34% C:33%
     localStorage.setItem(TEST_KEY, variant);
   } else if (urlParam && ['A','B','C'].includes(variant)) {
     localStorage.setItem(TEST_KEY, variant);
@@ -1422,7 +1422,7 @@ body.variant-c .badge--rare           { background: var(--c-navy-mid); }
     variant = localStorage.getItem(TEST_KEY);
     if (!variant) {
       const r = Math.random();
-      variant = r < 0.25 ? 'A' : r < 0.50 ? 'B' : 'C'; // A:25% B:25% C:50%
+      variant = r < 0.33 ? 'A' : r < 0.67 ? 'B' : 'C'; // A:33% B:34% C:33% // A:25% B:25% C:50%
       localStorage.setItem(TEST_KEY, variant);
     }
   }

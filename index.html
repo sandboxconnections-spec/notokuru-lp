@@ -3,6 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- A/B EARLY FETCH: B案をURL変更なしで読み込む（リダイレクトなし） -->
+<script>
+(function(){
+  var TEST_KEY = 'ab_hero_guide_v1';
+  var urlParam = new URLSearchParams(location.search).get('ab');
+  var variant = urlParam ? urlParam.toUpperCase() : localStorage.getItem(TEST_KEY);
+  if (!variant) {
+    var r = Math.random();
+    variant = r < 0.25 ? 'A' : r < 0.50 ? 'B' : 'C';
+    localStorage.setItem(TEST_KEY, variant);
+  } else if (urlParam && ['A','B','C'].includes(variant)) {
+    localStorage.setItem(TEST_KEY, variant);
+  }
+  if (variant === 'B') {
+    // ページを隠してB案をfetch → document.write で差し替え（URLそのまま）
+    document.documentElement.style.visibility = 'hidden';
+    fetch('./lp_b.html')
+      .then(function(res){ return res.text(); })
+      .then(function(html){
+        document.open();
+        document.write(html);
+        document.close();
+      })
+      .catch(function(){
+        // fetchに失敗した場合はA案を表示（フォールバック）
+        document.documentElement.style.visibility = 'visible';
+      });
+  }
+})();
+</script>
 <title>みんなでひこう！青柏祭2026 家族体験チケット｜のとくる？</title>
 <meta name="description" content="高さ12m・重さ20トンの山車を、家族みんなでひく！ユネスコ無形文化遺産・青柏祭2026。子ども大歓迎の体験チケット。ファミリーセットで10%割引・1人¥4,050。">
 <meta property="og:title" content="みんなでひこう！青柏祭2026 家族体験チケット">
@@ -1397,10 +1427,7 @@ body.variant-c .badge--rare           { background: var(--c-navy-mid); }
     }
   }
 
-  // B案：新デザインLP（lp_b.html）にリダイレクト
-  if (variant === 'B') {
-    window.location.replace('./lp_b.html');
-  }
+  // B案：先頭スクリプトでfetch済み。ここでは何もしない。
 
   // C案：ダークヒーローを表示・家族向けヒーローを非表示・ナビー配色＋テキスト適用
   if (variant === 'C') {

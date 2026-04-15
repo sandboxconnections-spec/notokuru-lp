@@ -822,7 +822,7 @@ body.variant-c .badge--rare           { background: var(--c-navy-mid); }
   <div class="inner">
     <div class="cta-text">
       <strong>🎪 でかやま開催まで</strong>
-      <ruby>曳<rt>ひ</rt></ruby>き手プラン ¥4,050〜
+      青柏祭 体験プラン ¥4,500〜
     </div>
     <a href="#plans" class="btn btn--main" style="padding:12px 20px;font-size:13px;">
       チケットを見る
@@ -847,7 +847,7 @@ body.variant-c .badge--rare           { background: var(--c-navy-mid); }
 
     <!-- サブコピー -->
     <p style="font-size:14px;line-height:2;color:rgba(255,255,255,.5);margin-bottom:32px;">
-      観客ではなく、<span style="color:rgba(255,255,255,.85);font-weight:700;">曳き手として</span>参加する体験チケット。<br>
+      観客ではなく、<span style="color:rgba(255,255,255,.85);font-weight:700;">参加者として</span>体験する体験チケット。<br>
       石川県七尾市 ／ 5月3日〜5日
     </p>
 
@@ -1060,7 +1060,7 @@ body.variant-c .badge--rare           { background: var(--c-navy-mid); }
         <div class="flow-body">
           <div class="icon">🎽</div>
           <div class="title">「でかやま」について学び、手ぬぐいを受け取る<span style="font-size:13px;font-weight:400;color:var(--text-lt);">（10分程度）</span></div>
-          <div class="desc">チケットに付属の手ぬぐいをお渡しします。首に巻いて、<ruby>曳<rt>ひ</rt></ruby>き手衆の仲間入り！</div>
+          <div class="desc">チケットに付属の手ぬぐいをお渡しします。首に巻いて、祭りの仲間入り！</div>
         </div>
       </div>
       <div class="flow-item" style="background:linear-gradient(rgba(255,255,255,0.82),rgba(255,255,255,0.82)) center/cover, url('dekayama.jpg') center/cover;">
@@ -1126,7 +1126,7 @@ body.variant-c .badge--rare           { background: var(--c-navy-mid); }
     <div class="plan-main">
       <div class="plan-main-header">
         <div class="recommend">👨‍👩‍👧‍👦 ファミリーおすすめ</div>
-        <div class="name"><ruby>曳<rt>ひ</rt></ruby>き手プラン</div>
+        <div class="name">青柏祭 体験プラン</div>
         <div class="price-row">
           <span class="price">¥4,050</span>
           <div class="price-note">
@@ -1397,9 +1397,9 @@ body.variant-c .badge--rare           { background: var(--c-navy-mid); }
     }
   }
 
-  // B案：ヒーロー直下にアプリDL手順バナーを表示
+  // B案：新デザインLP（lp_b.html）にリダイレクト
   if (variant === 'B') {
-    document.getElementById('ab-hero-guide').style.display = 'block';
+    window.location.replace('./lp_b.html');
   }
 
   // C案：ダークヒーローを表示・家族向けヒーローを非表示・ナビー配色＋テキスト適用

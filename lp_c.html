@@ -144,6 +144,16 @@ a { text-decoration: none; color: inherit; }
   position: relative;
   z-index: 1;
 }
+/* 下端から白フェードを写真ゾーンに垂らして境界線を消す */
+.concept__head::after {
+  content: '';
+  position: absolute;
+  bottom: -48px; left: 0; right: 0;
+  height: 48px;
+  background: linear-gradient(to bottom, #ffffff 0%, rgba(255,255,255,0) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
 .concept__title {
   font-family: 'Noto Serif JP', 'Yu Mincho', 'Hiragino Mincho ProN', serif;
   font-weight: 700;

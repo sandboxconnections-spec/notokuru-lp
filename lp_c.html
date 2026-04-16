@@ -138,25 +138,70 @@ a { text-decoration: none; color: inherit; }
 .inner { max-width: 480px; margin: 0 auto; }
 
 /* ===== CONCEPT ===== */
-#concept {
-  background-image: url('feature1.webp');
-  background-position: bottom center;
-  background-size: 100% 320px;
-  background-repeat: no-repeat;
-  padding-bottom: 280px;
+.concept__head {
+  padding: 72px 20px 40px;
+  background: var(--white);
 }
-
-#concept .sec-title,
-#concept .sec-lead {
+.concept__title {
   font-family: 'Noto Serif JP', 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
 }
-#concept .sec-title { font-weight: 700; letter-spacing: 0.12em; }
-#concept .sec-lead  { font-size: 15px; color: var(--text); font-weight: 400; }
+.concept__subtitle {
+  text-align: center;
+  font-family: 'Noto Serif JP', 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+  font-size: 15px;
+  color: var(--text);
+  font-weight: 400;
+  margin-bottom: 0;
+}
 
+/* 写真ゾーン：詩文を写真の上に浮かせる */
+.concept__scene {
+  position: relative;
+  background-image: url('feature1.webp');
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+/* 上端を白くフェードアウト → セクションと自然につながる */
+.concept__scene::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 160px;
+  background: linear-gradient(to bottom, #ffffff 0%, rgba(255,255,255,0) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+/* 写真全体に薄い紺オーバーレイ → 白文字が読みやすく */
+.concept__scene::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 12, 60, 0.32);
+  z-index: 0;
+}
+.concept__scene-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 110px 28px 0;
+}
 .concept__poem {
   font-family: 'Noto Serif JP', 'Yu Mincho', 'Hiragino Mincho ProN', serif;
-  font-size: 16px; line-height: 2.8; font-weight: 300;
-  color: var(--text);
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #fff;
+  text-shadow: 0 1px 12px rgba(0, 5, 40, 0.75);
+}
+.concept__poem p {
+  margin-bottom: 1.4em;
+}
+.concept__poem p:last-child {
   margin-bottom: 0;
 }
 
@@ -399,19 +444,27 @@ a { text-decoration: none; color: inherit; }
 </section>
 
 <!-- ===== CONCEPT ===== -->
-<section class="section" id="concept">
-  <div class="inner">
-    <span class="eyebrow">CONCEPT</span>
-    <h2 class="sec-title">YOBARE</h2>
-    <p class="sec-lead">能登ってね、</p>
-    <div class="concept__poem">
-      <p>ふと呼ばれて</p>
-      <p>思いもよらない出来事をした。</p>
-      <p>こんな楽しい場所があったなんて。</p>
-      <p>きっとまだまだ見たことのないものがあるのだろう。</p>
-      <p>呼ばれてよかった。</p>
-      <p>次は僕が呼んでみようかな。</p>
-      <p>呼ぼう、この場所に。</p>
+<section id="concept">
+  <!-- 白背景の見出しエリア -->
+  <div class="concept__head">
+    <div class="inner">
+      <span class="eyebrow">CONCEPT</span>
+      <h2 class="sec-title concept__title">YOBARE</h2>
+      <p class="concept__subtitle">能登ってね、</p>
+    </div>
+  </div>
+  <!-- 写真の上に詩文を浮かせるエリア -->
+  <div class="concept__scene">
+    <div class="concept__scene-inner">
+      <div class="concept__poem">
+        <p>ふと呼ばれて</p>
+        <p>思いもよらない出来事をした。</p>
+        <p>こんな楽しい場所があったなんて。</p>
+        <p>きっとまだまだ見たことのないものがあるのだろう。</p>
+        <p>呼ばれてよかった。</p>
+        <p>次は僕が呼んでみようかな。</p>
+        <p>呼ぼう、この場所に。</p>
+      </div>
     </div>
   </div>
 </section>

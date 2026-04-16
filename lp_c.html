@@ -375,9 +375,6 @@ a { text-decoration: none; color: inherit; }
 .bottom-bar__right .material-icons-outlined { font-size: 18px; }
 .bottom-spacer { height: 56px; }
 
-/* ===== SCROLL ANIM ===== */
-.appear { opacity: 0; transform: translateY(20px); transition: opacity 0.55s, transform 0.55s; }
-.appear.visible { opacity: 1; transform: translateY(0); }
 </style>
 </head>
 <body>
@@ -416,7 +413,7 @@ a { text-decoration: none; color: inherit; }
     <span class="eyebrow">CONCEPT</span>
     <h2 class="sec-title">YOBARE</h2>
     <p class="sec-lead">能登ってね、</p>
-    <div class="concept__poem appear">
+    <div class="concept__poem">
       <p>ふと呼ばれて</p>
       <p>思いもよらない出来事をした。</p>
       <p>こんな楽しい場所があったなんて。</p>
@@ -426,7 +423,7 @@ a { text-decoration: none; color: inherit; }
       <p>呼ぼう、この場所に。</p>
     </div>
   </div>
-  <img class="concept__photo appear" src="feature1.webp" alt="でかやま夜景">
+  <img class="concept__photo" src="feature1.webp" alt="でかやま夜景">
 </section>
 
 <!-- ===== FEATURE ===== -->
@@ -435,19 +432,19 @@ a { text-decoration: none; color: inherit; }
     <span class="eyebrow">FEATURE</span>
     <h2 class="sec-title">能登だからできること</h2>
 
-    <div class="feature-item appear">
+    <div class="feature-item">
       <img class="feature-item__img" src="feature2.webp" alt="青柏祭でかやま">
       <div class="feature-item__label">世界に誇る無形文化遺産</div>
       <p class="feature-item__text">ユネスコ無形文化遺産に登録された「青柏祭」。高さ12m・重さ20トンの巨大山車「でかやま」が七尾の街を練り歩く、450年以上続く祭りです。日本が誇る祭り文化を、ここで体感してください。</p>
     </div>
 
-    <div class="feature-item appear">
+    <div class="feature-item">
       <img class="feature-item__img" src="img_a.webp" alt="でかやまの迫力">
       <div class="feature-item__label">間近で感じるでかやまの迫力</div>
       <p class="feature-item__text">4階建てビルに相当する高さ、アフリカゾウ3頭分の重さ。目の前に現れるでかやまのスケールは、写真や映像では伝わらない。専属ガイドと一緒に、その迫力を全身で感じてください。</p>
     </div>
 
-    <div class="feature-item appear">
+    <div class="feature-item">
       <img class="feature-item__img" src="img_b.webp" alt="みんなで曳く祭り">
       <div class="feature-item__label">みんなで曳く祭り</div>
       <p class="feature-item__text">地元の人も、観光客も、子どもも。誰でも綱を持って、一緒に曳くことができる。力を合わせ、声を合わせて動かす20トン。ここでしか味わえない一体感がここにあります。</p>
@@ -735,12 +732,6 @@ document.querySelectorAll('.faq-item').forEach(item => {
     if (!wasOpen) item.classList.add('open');
   });
 });
-
-// Scroll animations
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-document.querySelectorAll('.appear').forEach(el => obs.observe(el));
 
 // GA4 tracking
 document.querySelectorAll('[data-track]').forEach(el => {

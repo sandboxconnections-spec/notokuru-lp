@@ -139,8 +139,10 @@ a { text-decoration: none; color: inherit; }
 
 /* ===== CONCEPT ===== */
 .concept__head {
-  padding: 72px 20px 40px;
+  padding: 72px 20px 52px;
   background: var(--white);
+  position: relative;
+  z-index: 1;
 }
 .concept__title {
   font-family: 'Noto Serif JP', 'Yu Mincho', 'Hiragino Mincho ProN', serif;
@@ -164,6 +166,7 @@ a { text-decoration: none; color: inherit; }
   background-position: center;
   padding-bottom: 80px;
   overflow: hidden;
+  margin-top: -52px; /* concept__headのpadding-bottomと同値でオーバーラップ */
 }
 /* 上端を白くフェードアウト → セクションと自然につながる */
 .concept__scene::before {
